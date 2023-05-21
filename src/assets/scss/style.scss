@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "header/header.scss";
+@import "section/section.scss";
+@import "section1/section1.scss";
+@import "section2/section2.scss";
+@import "section3/section3.scss";
+@import "section5/section5.scss";
+
+@import "pages/about/about.scss";
+@import "pages/products/products.scss";
+@import "pages/contact/contact.scss";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-blue_light: #0f77c2;
+    --color-blue_dark: #0c1d32;
+    --color-gray: #687588;
+    --color-black: #232324;
+    --color-white_blueish: #eff3fe;
+    --color-gray_blue: #d4dff5;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-white_blueish);
+    max-width: 1370px;
+    margin: auto;
+}
+
+a {
+    color: inherit;
+    text-transform: none;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #dce2f3;
+    h2 {
+        width: 50%;
+    }
+}
+.npm {
+    padding: 0;
+    margin: 0;
+}
+
+.padding {
+    &_big {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    &_normal {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    &_small {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+}
+
+.language-picker {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+span {
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+.divided {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.line {
+    &__horizontal {
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-gray);
+        border-radius: 10px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.title {
+    &__number {
+        font-weight: 600;
+        font-size: 56px;
+        color: var(--color-black);
+        margin: 0;
+    }
+}
+
+.bg_blue_dark {
+    background-color: var(--color-blue_dark);
+    color: white;
+    background-image: url("../img/arrow-left_big_blue.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: auto 100%;
+}
+
+.pad_ver_5 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.pad_ver_3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.width_100 {
+    width: 100%;
+}
+.width_50px {
+    width: 50px;
+}
+.width_60 {
+    width: 60%;
+}
+
+.fw_700 {
+    font-weight: 700 !important;
+}
+
+.mba {
+    margin-bottom: auto;
+}
+
+.mta {
+    margin-top: auto;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: max-content;
+    cursor: pointer;
+    transition: 300ms ease;
+    &:active {
+        transform: scale(0.9);
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        color: var(--color-blue_dark);
+        margin: 0;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        color: var(--color-black);
+        margin: 0;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: start;
+    }
+}
+.footer {
+    margin-top: 10rem;
+    padding: 5rem 0;
+    background-color: var(--color-gray_blue);
+    border-top: 1px solid #b6c2d8;
+    &__title {
+        color: var(--color-gray);
+    }
+    &__text {
+        color: var(--color-blue_dark);
+        font-weight: 500;
+        font-size: 16px;
+        margin: 0;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: start;
+        justify-content: center;
+        justify-items: center;
+        gap: 3rem;
+    }
+}
+.gallery {
+    display: grid;
+    padding-top: 5rem;
+    gap: 1.5rem;
+    justify-content: center;
+    grid-template-areas: "c1 c1 c2 c3 c4 c4" "c1 c1 c7 c7 c8 c10" "c5 c6 c7 c7 c9 c10";
+    img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    &__item_1 {
+        grid-area: c1;
+    }
+
+    &__item_2 {
+        grid-area: c2;
+    }
+
+    &__item_3 {
+        grid-area: c3;
+    }
+
+    &__item_4 {
+        grid-area: c4;
+    }
+
+    &__item_5 {
+        grid-area: c5;
+    }
+
+    &__item_6 {
+        grid-area: c6;
+    }
+
+    &__item_7 {
+        grid-area: c7;
+        background-color: #e8edfa;
+        padding: 2rem;
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #4a576a;
+        }
+    }
+
+    &__item_8 {
+        grid-area: c8;
+    }
+
+    &__item_9 {
+        grid-area: c9;
+    }
+
+    &__item_10 {
+        grid-area: c10;
+    }
+}
+.contact-info{
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    backdrop-filter: blur(50px);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal {
+    max-width: 600px;
+    margin: auto auto;
+    padding: 3rem;
+    color: var(--color-blue_dark);
+    position: relative;
+    border: none;
+    border-radius: 12px;
+    background: #FFFFFF;
+    backdrop-filter: blur(36px);
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.2);
+    &__title {
+        color: inherit;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 110%;
+        width: 90%;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        & input {
+            padding: 0.5rem 1rem;
+            border-radius: 10rem;
+            outline: none;
+            width: 50%;
+            border: 1px solid #E2E4E5;
+            &::placeholder {
+                color: #858E98;
+            }
+        }
+        &__button {
+            border: none;
+            border-radius: 10rem;
+            padding: 0.5rem 2rem;
+            width: max-content;
+            background-color: var(--color-blue_dark);
+            cursor: pointer;
+            color: white;
+        }
+    }
+    &__cancel {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    &::backdrop {
+        backdrop-filter: blur(20px);
+    }
+}
+@import "responsive.scss";
