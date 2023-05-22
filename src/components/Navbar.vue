@@ -115,12 +115,10 @@ export default{
         openNavbar() {
             const navbar = document.querySelector('.navbar-hidden');
             navbar.classList.add('navbar-hidden_active');
-            document.body.style.overflowY = 'hidden';
         },
         closeNavbar() {
             const navbar = document.querySelector('.navbar-hidden');
             navbar.classList.remove('navbar-hidden_active');
-            document.body.style.overflowY = 'auto';
         }
     }
 }
