@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="header header__main">
+    <div class="contact">
+        <div class="header header__main bg_img_disabled">
             <Navbar />
         </div>
     
@@ -56,7 +56,7 @@ export default {
     components: {
         Navbar,
         Footer
-    }
+    },
 }
 
 </script>

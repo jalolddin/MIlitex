@@ -1,14 +1,5 @@
 .products {
     background-color: var(--color-white_blueish);
-    .header {
-        color: var(--color-blue_dark);
-        &__main {
-            background-image: none;
-        }
-        &__top {
-            border-bottom: 2px solid #91bfe5;
-        }
-    }
     .banner {
         background-color: #dce2f3;
     }

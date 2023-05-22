@@ -28,7 +28,6 @@
 body {
     font-family: "Inter", sans-serif;
     background-color: var(--color-white_blueish);
-    max-width: 1370px;
     margin: auto;
 }
 
@@ -297,12 +296,17 @@ span {
     background: #FFFFFF;
     backdrop-filter: blur(36px);
     box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.2);
+    background-image: url('../img/arrow-right_blue_gradient.png');
+    background-repeat: no-repeat;
+    background-position: 150% 250%;
+    background-size: 50% auto;
     &__title {
         color: inherit;
         font-weight: 500;
         font-size: 34px;
         line-height: 110%;
         width: 90%;
+        margin-top: 0;
     }
     &__form {
         display: flex;
@@ -321,7 +325,7 @@ span {
         &__button {
             border: none;
             border-radius: 10rem;
-            padding: 0.5rem 2rem;
+            padding: 10px 50px;
             width: max-content;
             background-color: var(--color-blue_dark);
             cursor: pointer;
@@ -336,5 +340,29 @@ span {
     &::backdrop {
         backdrop-filter: blur(20px);
     }
+}
+
+.about-header {
+    color: var(--color-blue_dark);
+    &__main {
+        background-image: none;
+    }
+    &__top {
+        border-bottom: none;
+    }
+}
+
+.products-header {
+    color: var(--color-blue_dark);
+    &__main {
+        background-image: none;
+    }
+    &__top {
+        border-bottom: 2px solid #91bfe5;
+    }
+}
+
+.bg_img_disabled {
+    background-image: none
 }
 @import "responsive.scss";

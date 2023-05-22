@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="header header__main">
+  <div class="header header__main bg_img_disabled">
     <Navbar />
 </div>
 
