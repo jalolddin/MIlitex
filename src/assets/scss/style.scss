@@ -365,4 +365,9 @@ span {
 .bg_img_disabled {
     background-image: none
 }
+
+.header-home {
+    background-image: url('../img/header-main.png'), linear-gradient(var(--color-blue_light), var(--color-blue_dark));
+    background-size: cover, cover
+}
 @import "responsive.scss";

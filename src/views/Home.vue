@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="header header__main">
+    <div class="header header__main header-home">
       <Navbar />
       <div class="header__center padding_normal">
           <div class="header__content">
