@@ -155,7 +155,6 @@
             display: grid;
             gap: 2rem;
             grid-template-columns: repeat(2, 1fr);
-            text-align: center;
             & .card {
                 max-width: 250px;
             }
@@ -187,48 +186,15 @@
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
+    .hamburger {
+        display: inline-block;
+    }
     .header {
         &__nav {
-            position: relative;
-            &::before {
-                content: "㆔";
-            }
-            &:hover {
-                & ul {
-                    opacity: 1;
-                    visibility: visible;
-                    height: max-content;
-                    width: max-content;
-                }
-            }
-            ul {
-                color: white;
-                position: absolute;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 15px 15px rgba(blue, 0.5);
-                padding: 1rem;
-                z-index: 1;
-                gap: 1rem;
-                top: 0;
-                right: 0;
-                opacity: 0;
-                height: 0;
-                visibility: hidden;
-                background-color: var(--color-blue_light);
-                border-radius: 1rem;
-                a {
-                    padding: 0;
-                    &:hover {
-                        border-bottom: 2px solid var(--color-blue_dark);
-                    }
-                }
-                & .link_active {
-                    border-bottom: 2px solid var(--color-blue_dark);
-                }
-            }
+            display: none;
+        }
+        .language-picker {
+            display: none;
         }
     }
     .banner {
@@ -246,6 +212,11 @@
     .section {
         &__title {
             width: 90%;
+        }
+    }
+    .section1 {
+        & .button {
+            margin: 0 auto;
         }
     }
     .section2 .divided {
@@ -328,17 +299,88 @@
             width: 100%;
         }
     }
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: flex;
+    }
     
     .footer {
+        text-align: left;
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: var(--color-blue_dark)!important;
+        }
         margin-top: 3rem;
         padding: 2rem 0;
+        &-logo {
+            grid-area: logo;
+            & .card__container {
+                justify-content: flex-start;
+                gap: 2rem;
+                & img {
+                    width: 45px;
+                }
+            }
+        }
+        &-pages {
+            grid-area: pages;
+            &-inner {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                gap: 2rem;
+            }
+            & .footer__title {
+                margin: 0;
+                padding: 0;
+            }
+            & .footer__text {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+        }
+        &-products {
+            grid-area: products;
+        }
+        &-contact {
+            grid-area: contact;
+        }
+        &__title {
+            color: var(--color-gray);
+        }
+
+        &-products {
+            display: none;
+        }
+        &-contact {
+            & .footer__text {
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 36px;
+            }
+        }
+        &-address {
+            grid-area: address;
+            justify-self: start;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+        }
         &__container {
             display: grid;
-            gap: 1rem;
+            gap: 2.5rem;
             grid-template-columns: 1fr;
-            text-align: center;
+            grid-template-areas: "contact" "pages" "address" "logo";
             & .card {
-                max-width: 250px;
+                width: 100%;
+                max-width: none;
             }
         }
     }

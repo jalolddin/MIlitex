@@ -145,7 +145,49 @@
       <h2 class="section__title">
           Какие преимущества у нас есть перед другими
       </h2>
+      <div class="mobile-only">
+        <div class="card">
+        <div class="blue-text">
+            01
+        </div>
+        <h3 class="card__title">
+            Качество
+        </h3>
+        <div class="card__text">
+            Высококачественной продукции соответ-ствующей всем нормам и предлагающей взаимовыгодное сотрудничество
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="blue-text">
+            02
+        </div>
+        <h3 class="card__title">
+            Качество
+        </h3>
+        <div class="card__text">
+            Высококачественной продукции соответ-ствующей всем нормам и предлагающей взаимовыгодное сотрудничество
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="blue-text">
+            03
+        </div>
+        <h3 class="card__title">
+            Качество
+        </h3>
+        <div class="card__text">
+            Высококачественной продукции соответ-ствующей всем нормам и предлагающей взаимовыгодное сотрудничество
+        </div>
+      </div>
+
       <div class="padding_normal">
+          <img class="width_100" src="../assets/img/rolls-small.png" alt="">
+      </div>
+      </div>
+      <div class="padding_normal desktop-only">
           <img class="width_100" src="../assets/img/cotton-rolls-info.png" alt="">
       </div>
   </div>
