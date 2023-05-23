@@ -29,16 +29,16 @@
                 <p class="footer__title">Продукты</p>
                 <p class="footer__text"><a href="#">Пряжа кардная Ne 32/1, 100%</a></p>
                 <p class="footer__text"><a href="#">Пряжа кардная Ne 30/1, 100%</a></p>
-                <p class="footer__text"><a href="#">Пряжа кардная пневмопрядельная Ne 32/1, 100%</a></p>
+                <p class="footer__text"><a href="#">Пряжа кардная пневмопрядельная <br> Ne 32/1, 100%</a></p>
             </div>
-            <p class="footer__text mobile-only footer-address"><a href="#">Узбекистан, г. Ташкент, ул.Мукими, дом,10.52</a></p>
+            <p class="footer__text mobile-only footer-address"><a href="#">Узбекистан, г. Ташкент, ул.Мукими, дом,<br>10.52</a></p>
 
             <div class="card footer-contact">
                 <p class="footer__title">Контакты</p>
                 <p class="footer__text"><a href="#">+998 99 002 06 29</a></p>
                 <p class="footer__text"><a href="#">+998 90 917 01 17</a></p>
                 <p class="footer__text"><a href="#">+998 99 073 00 00</a></p>
-                <p class="footer__text desktop-only"><a href="#">Узбекистан, г. Ташкент, ул.Мукими, дом,10.52</a></p>
+                <p class="footer__text desktop-only"><a href="#">Узбекистан, г. Ташкент, ул.Мукими, дом, 10.52</a></p>
             </div>
         </div>
     </div>

@@ -119,6 +119,15 @@ span {
     background-size: auto 100%;
 }
 
+.bg_green_dark {
+    background-color: var(--color-blue_dark);
+    color: white;
+    background-image: url("../img/arrow-left_green_shadow.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: auto 100%;
+}
+
 .pad_ver_5 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -210,6 +219,14 @@ span {
         justify-content: center;
         justify-items: center;
         gap: 3rem;
+    }
+    &-pages-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__title {
+        color: #687588;
     }
 }
 .gallery {
@@ -364,11 +381,6 @@ span {
     background-image: none
 }
 
-.header-home {
-    background-image: url('../img/header-main.png'), linear-gradient(var(--color-blue_light), var(--color-blue_dark));
-    background-size: cover, cover
-}
-
 .navbar-hidden {
     transition: 300ms ease;
     background-color: white;
@@ -449,4 +461,5 @@ span {
     font-size: 20px;
     line-height: 24px;
 }
+
 @import "responsive.scss";

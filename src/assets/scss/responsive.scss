@@ -62,7 +62,7 @@
     .contact {
         &__item {
             & p {
-                width: 80%;
+                width: 100%;
             }
         }
     }
@@ -193,8 +193,15 @@
         &__nav {
             display: none;
         }
+        &__content {
+            width: 80%;
+        }
         .language-picker {
             display: none;
+        }
+        &__main {
+            background-position: 100% 130%, center, center;
+            background-size: 50% auto, cover, cover;
         }
     }
     .banner {
@@ -238,9 +245,15 @@
         &__countries {
             width: 100%;
             font-size: 14px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            align-items: start;
+            align-content: start;
+            gap: 1rem;
             & .card {
                 gap: 0rem;
+                display: flex;
+                justify-content: start;
                 p {
                     font-size: 14px;
                 }
@@ -248,8 +261,14 @@
         }
     }
     .gallery {
-        grid-template-areas: "c4" "c7" "c9";
-
+        grid-template-areas: 
+            "c1 c1" 
+            "c5 c6" 
+            "c7 c7" 
+            "c4 c4" 
+            "c8 c10" 
+            "c9 c10" 
+            "c2 c3";
         &__item_7 {
             padding: 1rem;
             gap: 10px;
@@ -260,31 +279,17 @@
                 font-size: 20px;
             }
         }
-        &__item_1 {
-            display: none;
-        }
-
         &__item_2 {
-            display: none;
+            display: inline-block;
         }
         &__item_3 {
-            display: none;
-        }
-
-        &__item_5 {
-            display: none;
+            display: inline-block;
         }
         &__item_6 {
-            display: none;
+            display: inline-block;
         }
         &__item_8 {
-            display: none;
-        }
-        &__item_6 {
-            display: none;
-        }
-        &__item_10 {
-            display: none;
+            display: inline-block;
         }
     }
     .all-products {
@@ -383,5 +388,16 @@
                 max-width: none;
             }
         }
+    }
+
+    .bg_blue_dark, .bg_green_dark {
+        background-size: 70% 100%;
+        background-position: 215% 50px;
+    }
+    .wrap-reverse {
+        flex-direction: column-reverse;
+    }
+    .modal {
+        background-position: 150% 105%;
     }
 }

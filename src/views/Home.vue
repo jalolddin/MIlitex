@@ -6,7 +6,7 @@
           <div class="header__content">
               <h1 class="header__title">Текстильные продукции
                   высокого качества в Militex</h1>
-              <p class="header__text">Militex является одним из ведущих производителей высококачественной 100% х/б пряжи экспортирующей продукцию собственного производства. </p>
+              <p class="header__text desktop-only">Militex является одним из ведущих производителей высококачественной 100% х/б <br class="desktop-only"> пряжи экспортирующей продукцию собственного производства. </p>
               <router-link to="/modal" class="button">
                 <p>Cвязаться</p>
                   <img src="../assets/img/arrow-right.svg" alt="">
@@ -22,12 +22,12 @@
     <div class="section section1 padding_normal">
       <Modal />
       <p class="section__sub">Продукты</p>
-      <h2 class="section__title">У нас производиться такие такие продукты</h2>
+      <h2 class="section__title">У нас производиться <br> такие такие продукты</h2>
       <div class="section1__cards">
           <div class="card">
               <span>01</span>
               <h3 class="card__title">
-                  Хлопчатобумажная пряжа кардная <br>
+                  Хлопчатобумажная пряжа кардная <br class="desktop-only">
                   Ne 32/1, 100%
               </h3>
               <p class="card__text">
@@ -50,7 +50,7 @@
           <div class="card">
               <span>03</span>
               <h3 class="card__title">
-                  Хлопчатобумажная пряжа кардная <br>
+                  Хлопчатобумажная пряжа кардная <br class="desktop-only">
                   Ne 30/1, 100%
               </h3>
               <p class="card__text">
@@ -61,7 +61,7 @@
           <div class="card">
               <span>04</span>
               <h3 class="card__title">
-                  Пряжа 100% х/б, сурова, кардная, ткацкая,пневмопрядельная хлопчатобумажная OE NE 12/1 
+                  Пряжа 100% х/б, сурова, кардная,<br class="desktop-only"> ткацкая,пневмопрядельная хлопчатобумажная OE NE 12/1 
 
               </h3>
               <p class="card__text">
@@ -84,7 +84,7 @@
                   Мы в цыфрах
               </p>
               <h3 class="card__title">
-                  Militex является одним из ведущих производителей нешей страны
+                  Militex является одним из ведущих <br class="desktop-only"> производителей нешей страны
               </h3>
               <p class="section__text">
                   Основные виды деятельности MILI TEX GROUP прядение волокон, оптовая торговля. Отличительны черты нашей организации – это создание и стратегическое развитие лучшей Узбекской текстильной компании мирового уровня, обеспечивающей текстильный рынок России, Европы и азиатские страны.
@@ -96,7 +96,7 @@
                           14
                       </h3>
                       <p class="card__text">
-                          Лет опыта на рынке 
+                          Лет опыта <br class="desktop-only"> на рынке 
                       </p>
                   </div>
 
@@ -105,7 +105,7 @@
                           30
                       </h3>
                       <p class="card__text">
-                          Тонн в сутки прядельного шелка
+                          Тонн в сутки <br class="desktop-only"> прядельного шелка
                       </p>
                   </div>
 
@@ -114,7 +114,7 @@
                           750
                       </h3>
                       <p class="card__text">
-                          Сотруднтков работают в Militex 
+                          Сотруднтков работают <br class="desktop-only"> в Militex 
                       </p>
                   </div>
               </div>
@@ -129,7 +129,7 @@
       <div class="padding_normal bg_blue_dark pad_ver_5">
           <div class="section3__content">
               <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
-              <p>Постепенно создавайте синергетические общие связи с помощью кросс-медийного интеллектуального капитала. с энтузиазмом</p>
+              <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
               <router-link to="/modal" class="button">
                 <p>Cвязаться</p>
                   <img src="../assets/img/arrow-right.svg" alt="">
@@ -199,6 +199,9 @@
       <h2 class="section__title">
           C какими странами мы сотрудничаем?
       </h2>
+      <p class="section__text">
+        Мы экспортируем свою продукцию во многие страны, а именно: Россия, <br class="desktop-only"> Китай, Турция и другие. 
+      </p>
       <div class="section5__countries">
           <div class="card">
               <img src="../assets/img/flag-china.svg" alt="">
@@ -234,7 +237,7 @@
               <img src="../assets/img/flag-uk.svg" alt="">
               <p class="card__text">Великобритания</p>
           </div>
-
+          <br class="desktop-only">
           <div class="card">
               <img src="../assets/img/flag-un.svg" alt="">
               <p class="card__text">Европейский Союз</p>
@@ -248,10 +251,10 @@
   </div>
 
   <div class="section section3 padding_normal">
-      <div class="padding_normal bg_blue_dark pad_ver_5">
+      <div class="padding_normal bg_green_dark pad_ver_5">
           <div class="section3__content">
               <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
-              <p>Постепенно создавайте синергетические общие связи с помощью кросс-медийного интеллектуального капитала. с энтузиазмом</p>
+              <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
               <router-link to="/modal" class="button">
                 <p>Cвязаться</p>
                   <img src="../assets/img/arrow-right.svg" alt="">

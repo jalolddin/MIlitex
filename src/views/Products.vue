@@ -9,7 +9,7 @@
                 Продукты
             </p>
             <h2 class="section__title">
-                У нас производиться такие такие продукты
+                У нас производиться <br> такие такие продукты
             </h2>
         </div>
     
@@ -18,11 +18,11 @@
                 Продукты
             </p>
             <h2 class="section__title">
-                У нас производиться такие такие продукты
+                У нас производиться <br> такие такие продукты
             </h2>
             <div class="all-products">
                 
-                <div class="all-products__item">
+                <div class="all-products__item wrap-reverse">
                     <div class="all-products__item-image">
                         <img src="../assets/img/pp1.png" alt="">
                     </div>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
     
-                <div class="all-products__item">
+                <div class="all-products__item wrap-reverse">
                     <div class="all-products__item-image">
                         <img src="../assets/img/pp3.png" alt="">
                     </div>
@@ -121,10 +121,10 @@
     
     
         <div class="section section3 padding_normal">
-            <div class="padding_normal bg_blue_dark pad_ver_5">
+            <div class="padding_normal bg_green_dark pad_ver_5">
                 <div class="section3__content">
                     <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
-                    <p>Постепенно создавайте синергетические общие связи с помощью кросс-медийного интеллектуального капитала. с энтузиазмом</p>
+                    <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
                     <router-link to="/modal" class="button">
                         <p>Cвязаться</p>
                         <img src="../assets/img/arrow-right.svg" alt="">

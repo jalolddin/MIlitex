@@ -2,10 +2,10 @@
     color: white;
     font-weight: 600;
     &__main {
-        background-image: url(../img/arrow-left_big.png), url(../img/header-main.png);
+        background-image: url(../img/arrow-left_big.png), url(../img/header-main.png), linear-gradient(var(--color-blue_light), var(--color-blue_dark));
         background-repeat: no-repeat;
-        background-size: auto 100%, cover;
-        background-position: center right, center center;
+        background-size: auto 100%, cover, cover;
+        background-position: center right, center, center;
     }
     &__top {
         display: flex;

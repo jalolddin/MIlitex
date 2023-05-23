@@ -9,7 +9,7 @@
         О Нас
     </p>
     <h2 class="section__title">
-        Вы можете узнать про нашу историю
+        Вы можете узнать про <br> нашу историю
     </h2>
 </div>
 
@@ -21,7 +21,7 @@
                 Мы в цыфрах
             </p>
             <h3 class="card__title">
-                Militex является одним из ведущих производителей нешей страны
+                Militex является одним из ведущих <br class="desktop-only"> производителей нешей страны
             </h3>
             <p class="section__text">
                 Основные виды деятельности MILI TEX GROUP прядение волокон, оптовая торговля. Отличительны черты нашей организации – это создание и стратегическое развитие лучшей Узбекской текстильной компании мирового уровня, обеспечивающей текстильный рынок России, Европы и азиатские страны.
@@ -65,7 +65,7 @@
 
 <div class="section padding_normal">
     <p class="section__sub">кому мы можем помочь</p>
-    <h2 class="section__title">У нас производиться такие такие продукты</h2>
+    <h2 class="section__title">У нас производиться <br> такие такие продукты</h2>
 </div>
 
 <!-- stupid cards container -->
@@ -92,7 +92,7 @@
         <h3 class="card__title">
             Сложные заказы любых объемах
         </h3>
-        <p class="card__text">Militex является одним из ведущих производителей высококачественной 100% х/б пряжи экспортирующей продукцию собственного производства. Наши производственные мощности позволяют выполнять самые сложные заказы в любых объемах. Имея соответствующую производственную базу, которая состоит из сотрудников с большим опытом работы и современного оборудования, компания выпускает продукции, экологичность производства и соответствие международным стандартам. </p>
+        <p class="card__text">Militex является одним из ведущих <br class="desktop-only"> производителей высококачественной 100% х/<br class="desktop-only">б пряжи экспортирующей продукцию <br class="desktop-only"> собственного производства. Наши <br class="desktop-only"> производственные мощности позволяют<br class="desktop-only">выполнять самые сложные заказы в любых<br class="desktop-only"> объемах. Имея соответствующую<br class="desktop-only"> производственную базу, которая состоит из<br class="desktop-only"> сотрудников с большим опытом работы и<br class="desktop-only"> современного оборудования,<br class="desktop-only"> компания выпускает продукции,<br class="desktop-only"> экологичность производства и соответствие<br class="desktop-only"> международным стандартам. </p>
     </div>
     <div class="card gallery__item_8">
         <img src="../assets/img/woman-worker.jpg" alt="" class="width_100">
@@ -105,15 +105,15 @@
     </div>
 </div>
 
-<div class="section section3 padding_normal">
+<div class="section section3 padding_normal desktop-only">
     <div class="padding_normal bg_blue_dark pad_ver_5">
         <div class="section3__content">
             <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
-            <p>Постепенно создавайте синергетические общие связи с помощью кросс-медийного интеллектуального капитала. с энтузиазмом</p>
+            <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
             <router-link to="/modal" class="button">
               <p>Cвязаться</p>
                 <img src="../assets/img/arrow-right.svg" alt="">
-            </router-link>>
+            </router-link>
         </div>
     </div>  
 </div>
@@ -125,6 +125,9 @@
     <h2 class="section__title">
         C какими странами мы сотрудничаем?
     </h2>
+    <p class="section__text">
+        Мы экспортируем свою продукцию во многие страны, а именно: Россия, <br class="desktop-only"> Китай, Турция и другие. 
+    </p>
     <div class="section5__countries">
         <div class="card">
             <img src="../assets/img/flag-china.svg" alt="">
@@ -158,20 +161,33 @@
 
         <div class="card">
             <img src="../assets/img/flag-uk.svg" alt="">
-            <p class="card__text">Великобритания</p>
+            <p class="card__text">Великобрита <br class="mobile-only"> ния</p>
         </div>
 
         <div class="card">
             <img src="../assets/img/flag-un.svg" alt="">
-            <p class="card__text">Европейский Союз</p>
+            <p class="card__text">Европейский <div class="mobile-only"></div> Союз</p>
         </div>
 
     </div>
     <div class="padding_big">
     <img src="../assets/img/world-3d.png" alt="" class="width_100">
-
     </div>
 </div>
+<div class="section section3 padding_normal mobile-only">
+    <div class="padding_normal bg_blue_dark pad_ver_5">
+        <div class="section3__content">
+            <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
+            <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
+            <router-link to="/modal" class="button">
+              <p>Cвязаться</p>
+                <img src="../assets/img/arrow-right.svg" alt="">
+            </router-link>
+        </div>
+    </div>  
+</div>
+
+
 <Footer />
 </div>
 </template>
