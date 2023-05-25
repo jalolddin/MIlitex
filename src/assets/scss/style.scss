@@ -467,4 +467,13 @@ span {
     line-height: 24px;
 }
 
+.title__number {
+    & span {
+        color: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
 @import "responsive.scss";

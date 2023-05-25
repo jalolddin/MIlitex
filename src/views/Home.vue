@@ -21,7 +21,9 @@
     
     <div class="section section1 padding_normal">
       <Modal />
-      <p class="section__sub">Продукты</p>
+      <router-link to="/product" title="teeest" description="more test">
+        <p class="section__sub">Продукты</p>
+      </router-link>
       <h2 class="section__title">У нас производиться <br> такие такие продукты</h2>
       <div class="section1__cards">
           <div class="card">
@@ -93,7 +95,8 @@
               <div class="card__container">
                   <div class="card">
                       <h3 class="title__number">
-                          14
+                        <count-up :endVal="14" :options="counterOptions"></count-up>
+
                       </h3>
                       <p class="card__text">
                           Лет опыта <br class="desktop-only"> на рынке 
@@ -102,7 +105,9 @@
 
                   <div class="card">
                       <h3 class="title__number">
-                          30
+                        
+                        <count-up :end-val="30" :options="counterOptions"></count-up>
+
                       </h3>
                       <p class="card__text">
                           Тонн в сутки <br class="desktop-only"> прядельного шелка
@@ -111,7 +116,8 @@
 
                   <div class="card">
                       <h3 class="title__number">
-                          750
+                        <count-up :end-val="750" :options="counterOptions"></count-up>
+
                       </h3>
                       <p class="card__text">
                           Сотруднтков работают <br class="desktop-only"> в Militex 
@@ -262,6 +268,9 @@
           </div>
       </div>  
   </div>
+
+                        
+
   <Footer />
 </div>
 </template>
@@ -269,16 +278,30 @@
 <script>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import CountUp from "vue-countup-v3";
+
 export default {
     components: {
         Navbar,
-        Footer
+        Footer,
+        CountUp,
+    },
+    data() {
+        return { 
+            counterOptions: {
+                enableScrollSpy: true,
+            }        
+        }
     },
     methods: {
       scrollDown(){
         document.getElementById('footer').scrollIntoView({behavior: 'smooth'})
-      }
+      },
     }
 }
 
 </script>
+
+
+<style scoped>
+</style>

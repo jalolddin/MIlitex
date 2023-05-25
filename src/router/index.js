@@ -15,17 +15,23 @@ const routes = [
   {
     path: '/products',
     name: 'products',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Products.vue')
+    component: () => import(/* webpackChunkName: "products" */ '../views/Products.vue')
   },
   {
     path: '/contacts',
     name: 'contacts',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Contacts.vue')
+    component: () => import(/* webpackChunkName: "contacts" */ '../views/Contacts.vue')
   },
   {
     path: '/modal',
     name: 'modal',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Modal.vue')
+    component: () => import(/* webpackChunkName: "modal" */ '../views/Modal.vue')
+  },
+  {
+    path: "/product",
+    name: 'product',
+    props: true,
+    component: () => import(/* webpackChunkName: "product:props" */ "../views/Product.vue")
   }
 ]
 

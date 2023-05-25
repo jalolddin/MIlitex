@@ -28,33 +28,37 @@
             </p>
             <div class="line__horizontal"></div>
             <div class="card__container">
-                <div class="card">
-                    <h3 class="title__number">
-                        14
-                    </h3>
-                    <p class="card__text">
-                        Лет опыта на рынке 
-                    </p>
-                </div>
+                  <div class="card">
+                      <h3 class="title__number">
+                        <count-up :endVal="14" :options="counterOptions"></count-up>
 
-                <div class="card">
-                    <h3 class="title__number">
-                        30
-                    </h3>
-                    <p class="card__text">
-                        Тонн в сутки прядельного шелка
-                    </p>
-                </div>
+                      </h3>
+                      <p class="card__text">
+                          Лет опыта <br class="desktop-only"> на рынке 
+                      </p>
+                  </div>
 
-                <div class="card">
-                    <h3 class="title__number">
-                        750
-                    </h3>
-                    <p class="card__text">
-                        Сотруднтков работают в Militex 
-                    </p>
-                </div>
-            </div>
+                  <div class="card">
+                      <h3 class="title__number">
+                        
+                        <count-up :end-val="30" :options="counterOptions"></count-up>
+
+                      </h3>
+                      <p class="card__text">
+                          Тонн в сутки <br class="desktop-only"> прядельного шелка
+                      </p>
+                  </div>
+
+                  <div class="card">
+                      <h3 class="title__number">
+                        <count-up :end-val="750" :options="counterOptions"></count-up>
+
+                      </h3>
+                      <p class="card__text">
+                          Сотруднтков работают <br class="desktop-only"> в Militex 
+                      </p>
+                  </div>
+              </div>
         </div>
         <div class="section2__image__container">
             <img class="section2__image" src="../assets/img/cotton-man.png" alt="">
@@ -194,10 +198,20 @@
 <script>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import CountUp from "vue-countup-v3";
+
 export default {
     components: {
         Navbar,
+        CountUp,
         Footer
-    }
+    },
+    data() {
+        return { 
+            counterOptions: {
+                enableScrollSpy: true,
+            }        
+        }
+    },
 }
 </script>
