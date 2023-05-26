@@ -78,7 +78,7 @@
                 <div class="lang-item">ENG</div>
             </div>
         </div>
-        <div class="language-picker">
+        <div class="language-picker desktop-only">
             <p class="npm">EN</p>
             <img :src="arrw_down_icon_url" alt="">
         </div>

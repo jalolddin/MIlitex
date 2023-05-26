@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkmillitex_app"]=self["webpackChunkmillitex_app"]||[]).push([[316],{4372:function(n,t,e){e.r(t),e.d(t,{default:function(){return s}});var i=e(3396),l=e(7139);function r(n,t,e,r,u,p){return(0,i.wg)(),(0,i.iD)("div",null,[(0,i._)("h1",null,(0,l.zw)(e.title),1),(0,i._)("p",null,(0,l.zw)(e.description),1)])}var u={props:["title","description"]},p=e(89);const c=(0,p.Z)(u,[["render",r]]);var s=c}}]);
-//# sourceMappingURL=product:props.f0e6b070.js.map

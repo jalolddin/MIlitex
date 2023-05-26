@@ -28,7 +28,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "modal" */ '../views/Modal.vue')
   },
   {
-    path: "/product",
+    path: "/product/:id",
     name: 'product',
     props: true,
     component: () => import(/* webpackChunkName: "product:props" */ "../views/Product.vue")
@@ -37,7 +37,11 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  },
 })
 
 export default router

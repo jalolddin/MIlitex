@@ -21,17 +21,18 @@
     
     <div class="section section1 padding_normal">
       <Modal />
-      <router-link to="/product" title="teeest" description="more test">
         <p class="section__sub">Продукты</p>
-      </router-link>
       <h2 class="section__title">У нас производиться <br> такие такие продукты</h2>
       <div class="section1__cards">
           <div class="card">
               <span>01</span>
+            <router-link to="/product/01">
               <h3 class="card__title">
                   Хлопчатобумажная пряжа кардная <br class="desktop-only">
                   Ne 32/1, 100%
               </h3>
+            </router-link>
+
               <p class="card__text">
                   Компания "Mili Tex Group"( Узбекистан) выражает Вам свое почтение и предлагает 100% хлопковую пряжу для трикотажа и тканей пневмопрядильного...
               </p>
@@ -39,11 +40,12 @@
 
           <div class="card">
               <span>02</span>
+              <router-link to="/product/02">
               <h3 class="card__title">
                   Пряжа 100% х/б, сурова, кардная, ткацкая,
   пневмопрядельная хлопчатобумажная OE NE 20/1
-
               </h3>
+            </router-link>
               <p class="card__text">
                   Производство и продажа х/б пряжи пневмомеханического способа прядения для трикотажного и ткацкого назначения Ne (Oe) 20-30/1, Nm 34-50/1...
               </p>
@@ -51,10 +53,11 @@
 
           <div class="card">
               <span>03</span>
+              <router-link to="/product/03">
               <h3 class="card__title">
-                  Хлопчатобумажная пряжа кардная <br class="desktop-only">
-                  Ne 30/1, 100%
+                  Хлопчатобумажная пряжа кардная <br class="desktop-only"> Ne 30/1, 100%
               </h3>
+            </router-link>
               <p class="card__text">
                   Компания "Mili Tex Group"( Узбекистан) выражает Вам свое почтение и предлагает 100% хлопковую пряжу для трикотажа и тканей пневмопрядильного...
               </p>
@@ -62,10 +65,12 @@
 
           <div class="card">
               <span>04</span>
+              <router-link to="/product/04">
               <h3 class="card__title">
                   Пряжа 100% х/б, сурова, кардная,<br class="desktop-only"> ткацкая,пневмопрядельная хлопчатобумажная OE NE 12/1 
 
               </h3>
+            </router-link>
               <p class="card__text">
                   Производство и продажа х/б пряжи пневмомеханического способа прядения для трикотажного и ткацкого назначения Ne (Oe) 20-30/1, Nm 34-50/1...</p>
           </div>
