@@ -91,7 +91,7 @@
                   Мы в цыфрах
               </p>
               <h3 class="card__title">
-                  Militex является одним из ведущих <br class="desktop-only"> производителей нешей страны
+                  Militex является одним из ведущих <br class="desktop-only"> производи<span class="hyphen">-</span>телей нешей страны
               </h3>
               <p class="section__text">
                   Основные виды деятельности MILI TEX GROUP прядение волокон, оптовая торговля. Отличительны черты нашей организации – это создание и стратегическое развитие лучшей Узбекской текстильной компании мирового уровня, обеспечивающей текстильный рынок России, Европы и азиатские страны.
@@ -139,8 +139,8 @@
   <div class="section section3 padding_normal">
       <div class="padding_normal bg_blue_dark pad_ver_5">
           <div class="section3__content">
-              <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
-              <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
+              <h2>Cвяжитесь с нами и <br class="mobile-only">начните сотрудничес<span class="hyphen">  - </span>тво сегодня</h2>
+              <p>Постепенно создавайте синергетические общие связи с помощью кросс<div class="desktop-only">-</div><br class="desktop-only">медийного интеллектуального капитала. с энтузиазмом</p>
               <router-link to="/modal" class="button">
                 <p>Cвязаться</p>
                   <img src="../assets/img/arrow-right.svg" alt="">
@@ -174,10 +174,10 @@
             02
         </div>
         <h3 class="card__title">
-            Качество
+            Экологичность
         </h3>
         <div class="card__text">
-            Высококачественной продукции соответ-ствующей всем нормам и предлагающей взаимовыгодное сотрудничество
+            Экологичность производства и соответствие международным стандартам
         </div>
       </div>
 
@@ -187,14 +187,12 @@
             03
         </div>
         <h3 class="card__title">
-            Качество
+            Качество на все 100
         </h3>
-        <div class="card__text">
-            Высококачественной продукции соответ-ствующей всем нормам и предлагающей взаимовыгодное сотрудничество
-        </div>
+        
       </div>
 
-      <div class="padding_normal">
+      <div class="padding_normal section4__image">
           <img class="width_100" src="../assets/img/rolls-small.png" alt="">
       </div>
       </div>
