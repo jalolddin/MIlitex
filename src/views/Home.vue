@@ -135,20 +135,7 @@
           </div>
       </div>
   </div>
-
-  <div class="section section3 padding_normal">
-      <div class="padding_normal bg_blue_dark pad_ver_5">
-          <div class="section3__content">
-              <h2>Cвяжитесь с нами и <br class="mobile-only">начните сотрудничес<span class="hyphen">  - </span>тво сегодня</h2>
-              <p>Постепенно создавайте синергетические общие связи с помощью кросс<div class="desktop-only">-</div><br class="desktop-only">медийного интеллектуального капитала. с энтузиазмом</p>
-              <router-link to="/modal" class="button">
-                <p>Cвязаться</p>
-                  <img src="../assets/img/arrow-right.svg" alt="">
-              </router-link>
-          </div>
-      </div>  
-  </div>
-
+  <ContactSection />
   <div class="section section4 padding_normal">
       <p class="section__sub">
           НАШИ ПРЕИМУЩЕСТВА
@@ -258,22 +245,7 @@
 
       </div>
   </div>
-
-  <div class="section section3 padding_normal">
-      <div class="padding_normal bg_green_dark pad_ver_5">
-          <div class="section3__content">
-              <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
-              <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
-              <router-link to="/modal" class="button">
-                <p>Cвязаться</p>
-                  <img src="../assets/img/arrow-right.svg" alt="">
-              </router-link>
-          </div>
-      </div>  
-  </div>
-
-                        
-
+    <ContactSection />
   <Footer />
 </div>
 </template>
@@ -282,12 +254,13 @@
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 import CountUp from "vue-countup-v3";
-
+import ContactSection from '../components/ContactSection.vue'
 export default {
     components: {
         Navbar,
         Footer,
         CountUp,
+        ContactSection
     },
     data() {
         return { 

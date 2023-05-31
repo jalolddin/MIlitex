@@ -33,6 +33,7 @@
     }
 
     .section3 {
+        padding: 0;
         &__content {
             width: 80%;
             & h2 {
@@ -83,7 +84,7 @@
     }
 
     .section {
-        padding-top: 5rem;
+        padding-top: 50px;
         &__title {
             font-size: 25px;
             width: 60%;
@@ -182,6 +183,9 @@
 }
 
 @media (max-width: 550px) {
+    body{
+        background-color: white;
+    }
     .pad_ver_5 {
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -189,7 +193,16 @@
     .hamburger {
         display: inline-block;
     }
+    .pad_ver_3{
+        padding-top: 0;
+    }
     .header {
+        background-color: #DCE2F3;
+        &__center{
+            border: none;
+            justify-content: flex-start;
+            height: 400px;
+        }
         &__nav {
             display: none;
         }
@@ -217,6 +230,8 @@
         font-size: 25px;
     }
     .section {
+        background-color: white;
+        gap: 15px;
         &__title {
             width: 90%;
         }
@@ -244,18 +259,23 @@
     .section5 {
         &__countries {
             width: 100%;
-            font-size: 14px;
+            font-size: 12px;
+            word-break: break-all;
             display: grid;
             grid-template-columns: repeat(4,1fr);
             align-items: start;
             align-content: start;
-            gap: 1rem;
+            gap: 0.5rem;
             & .card {
                 gap: 0rem;
                 display: flex;
                 justify-content: start;
+                img{
+                    width: 36px;
+                    height: 36px;
+                }
                 p {
-                    font-size: 14px;
+                    font-size: 12px;
                 }
             }
         }
@@ -427,7 +447,7 @@
         }
     }
     .section {
-        gap: 30px;
+        gap: 25px;
         padding-top: 20px;
         &__title {
             font-weight: 500;
@@ -480,6 +500,7 @@
             line-height: 150%;
         }
         & .card__container {
+            
             .title__number {
                 font-style: normal;
                 font-weight: 600;

@@ -109,18 +109,7 @@
     </div>
 </div>
 
-<div class="section section3 padding_normal desktop-only">
-    <div class="padding_normal bg_blue_dark pad_ver_5">
-        <div class="section3__content">
-            <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
-            <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
-            <router-link to="/modal" class="button">
-              <p>Cвязаться</p>
-                <img src="../assets/img/arrow-right.svg" alt="">
-            </router-link>
-        </div>
-    </div>  
-</div>
+<ContactSection />
 
 <div class="section section5 padding_normal">
     <p class="section__sub">
@@ -165,12 +154,12 @@
 
         <div class="card">
             <img src="../assets/img/flag-uk.svg" alt="">
-            <p class="card__text">Великобрита <br class="mobile-only"> ния</p>
+            <p class="card__text">Великобрита<br class="mobile-only">ния</p>
         </div>
 
         <div class="card">
             <img src="../assets/img/flag-un.svg" alt="">
-            <p class="card__text">Европейский <div class="mobile-only"></div> Союз</p>
+            <p class="card__text">Европейский<div class="mobile-only"></div>Союз</p>
         </div>
 
     </div>
@@ -178,18 +167,7 @@
     <img src="../assets/img/world-3d.png" alt="" class="width_100">
     </div>
 </div>
-<div class="section section3 padding_normal mobile-only">
-    <div class="padding_normal bg_blue_dark pad_ver_5">
-        <div class="section3__content">
-            <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
-            <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
-            <router-link to="/modal" class="button">
-              <p>Cвязаться</p>
-                <img src="../assets/img/arrow-right.svg" alt="">
-            </router-link>
-        </div>
-    </div>  
-</div>
+<ContactSection />
 
 
 <Footer />
@@ -199,12 +177,13 @@
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 import CountUp from "vue-countup-v3";
-
+import ContactSection from '../components/ContactSection.vue'
 export default {
     components: {
         Navbar,
         CountUp,
-        Footer
+        Footer,
+        ContactSection
     },
     data() {
         return { 

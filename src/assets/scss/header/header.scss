@@ -12,7 +12,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 10rem;
-        border-bottom: 1px solid gray;
+        // border-bottom: 1px solid gray;
         padding: 1rem 0;
     }
     &__nav {
@@ -40,6 +40,7 @@
         justify-content: center;
         height: 90vh;
         position: relative;
+        border-top: 1px solid gray;
     }
     &__title {
         font-weight: 500;
