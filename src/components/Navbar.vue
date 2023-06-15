@@ -20,12 +20,12 @@
                 </li>
                 <li class="header__nav__item">
                   <router-link to="/about" :class="{'link_active': isActive === '/about'}">
-                     О Militex
+                     О Mili Tex Group
                   </router-link>
                 </li>
                 <li class="header__nav__item">
                   <router-link to="/products" :class="{'link_active': isActive === '/products'}">
-                    Продукты
+                    Продукция
                   </router-link>
                 </li>
                 <li class="header__nav__item">
@@ -58,12 +58,12 @@
                 </li>
                 <li class="header__nav__item">
                   <router-link to="/about" :class="{'link_active': isActive === '/about'}">
-                     О Militex
+                     О Mili Tex Group
                   </router-link>
                 </li>
                 <li class="header__nav__item">
                   <router-link to="/products" :class="{'link_active': isActive === '/products'}">
-                    Продукты
+                    Продукция
                   </router-link>
                 </li>
                 <li class="header__nav__item">
@@ -78,9 +78,12 @@
                 <div class="lang-item">ENG</div>
             </div>
         </div>
-        <div class="language-picker desktop-only">
-            <p class="npm">EN</p>
+        <div @click="lanShow = !lanShow" class="language-picker desktop-only">
+            <input v-model="selectedLan" type="text">
             <img :src="arrw_down_icon_url" alt="">
+        </div>
+        <div v-if="lanShow" class="available__languages">
+            <p class="npm" @click="selectLang(lan)" v-for="lan in languages" :key="lan">{{lan}}</p>
         </div>
         <div class="hamburger" @click="openNavbar" >
             <img :src="hamburger_icon_url" alt="">
@@ -92,6 +95,9 @@
 export default{
     data() {
         return {
+            selectedLan: 'RU',
+            lanShow: false,
+            languages: ['UZ', 'EN', 'RU'],
             isActive: '/',
             logo_url: '',
             arrw_down_icon_url: '',
@@ -112,6 +118,10 @@ export default{
     //    console.log(h = this.isActive) 
     },
     methods: {
+        selectLang(item){
+            this.selectedLan = item
+            this.lanShow = false
+        },
         openNavbar() {
             const navbar = document.querySelector('.navbar-hidden');
             navbar.classList.add('navbar-hidden_active');

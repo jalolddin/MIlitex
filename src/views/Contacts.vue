@@ -52,11 +52,91 @@
 <script>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 export default {
     components: {
         Navbar,
         Footer
     },
+    mounted() {
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.normalizeScroll(true)
+        const sectionTitle = gsap.utils.toArray('.section__title')
+        const callText = gsap.utils.toArray('.section3__content')
+        const desktopOnly = gsap.utils.toArray('.desktop-only')
+        const mobileOnly = gsap.utils.toArray('.mobile-only')
+        const footer = gsap.utils.toArray('.footer__container')
+        const contacts = gsap.utils.toArray('.contacts')
+        const contactsImage = gsap.utils.toArray('.contacts-image')
+
+
+
+        footer.forEach((box, i) => {
+        const anim = gsap.fromTo(box, {autoAlpha: 0, transform: 'translateY(7vw)', opacity: 0}, {duration: 1, autoAlpha: 1, transform: 'translateY(0vw)', opacity: 1});
+        ScrollTrigger.create({
+        trigger: box,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+
+    sectionTitle.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    contactsImage.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    contacts.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    callText.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    desktopOnly.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    mobileOnly.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+}
 }
 
 </script>

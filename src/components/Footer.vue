@@ -9,9 +9,9 @@
                 </div>
 
                 <div class="card__container">
-                    <a href="https://t.me/foffnow"><img src="../assets/img/telegram.svg" alt="" class="width_100"></a>
-                    <a href="https://t.me/foffnow"><img src="../assets/img/instagram.svg" alt="" class="width_100"></a>
-                    <a href="https://t.me/foffnow"><img src="../assets/img/facebook.svg" alt="" class="width_100"></a>
+                    <a href="#"><img src="../assets/img/telegram.svg" alt="" class="width_100"></a>
+                    <a href="#"><img src="../assets/img/instagram.svg" alt="" class="width_100"></a>
+                    <a style="margin-top: 2px" href="weixin://dl/chat?{Is5233935}"><img src="../assets/img/WeChat.svg" alt="" class="width_100"></a>
 
                 </div>
             </div>
@@ -20,25 +20,24 @@
                 <div class="footer-pages-inner">
                     <p class="footer__text"><a href="#"> Главная</a></p>
                     <p class="footer__text"><a href="#"> О нас </a></p>
-                    <p class="footer__text"><a href="#"> Продукты</a></p>
+                    <p class="footer__text"><a href="#"> Продукция</a></p>
                     <p class="footer__text"><a href="#">Контакты</a></p>
                 </div>
 
             </div>
             <div class="card footer-products">
-                <p class="footer__title">Продукты</p>
+                <p class="footer__title">Продукция</p>
                 <p class="footer__text"><a href="#">Пряжа кардная Ne 32/1, 100%</a></p>
                 <p class="footer__text"><a href="#">Пряжа кардная Ne 30/1, 100%</a></p>
                 <p class="footer__text"><a href="#">Пряжа кардная пневмопрядельная <br> Ne 32/1, 100%</a></p>
             </div>
-            <p class="footer__text mobile-only footer-address"><a href="#">Узбекистан, г. Ташкент, ул.Мукими, дом,<br>10.52</a></p>
+            <p class="footer__text mobile-only footer-address"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7">Узбекистан, г. Ташкент, Гулистанский район</a></p>
 
             <div class="card footer-contact">
                 <p class="footer__title">Контакты</p>
-                <p class="footer__text"><a href="#">+998 99 002 06 29</a></p>
-                <p class="footer__text"><a href="#">+998 90 917 01 17</a></p>
-                <p class="footer__text"><a href="#">+998 99 073 00 00</a></p>
-                <p class="footer__text desktop-only"><a href="#">Узбекистан, г. Ташкент, ул.Мукими, дом, 10.52</a></p>
+                <p class="footer__text"><a href="#">+998 95 198 10 10</a></p>
+                <p class="footer__text"><a href="#">(71) 90 167 58 46</a></p>
+                <p class="footer__text desktop-only"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7">Узбекистан, г. Ташкент, Гулистанский район</a></p>
             </div>
         </div>
     </div>

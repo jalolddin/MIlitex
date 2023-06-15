@@ -21,7 +21,7 @@
                 Мы в цыфрах
             </p>
             <h3 class="card__title">
-                Militex является одним из ведущих <br class="desktop-only"> производителей нешей страны
+                "Mili Tex Group" является одним из ведущих <br class="desktop-only"> производителей Нашей страны
             </h3>
             <p class="section__text">
                 Основные виды деятельности MILI TEX GROUP прядение волокон, оптовая торговля. Отличительны черты нашей организации – это создание и стратегическое развитие лучшей Узбекской текстильной компании мирового уровня, обеспечивающей текстильный рынок России, Европы и азиатские страны.
@@ -55,7 +55,7 @@
 
                       </h3>
                       <p class="card__text">
-                          Сотруднтков работают <br class="desktop-only"> в Militex 
+                          Сотруднтков работают <br class="desktop-only"> в "Mili Tex Group" 
                       </p>
                   </div>
               </div>
@@ -69,7 +69,7 @@
 
 <div class="section padding_normal">
     <p class="section__sub">кому мы можем помочь</p>
-    <h2 class="section__title">У нас производиться <br> такие такие продукты</h2>
+    <h2 class="section__title">У нас производиться <br> такие Продукция</h2>
 </div>
 
 <!-- stupid cards container -->
@@ -96,7 +96,7 @@
         <h3 class="card__title">
             Сложные заказы любых объемах
         </h3>
-        <p class="card__text">Militex является одним из ведущих <br class="desktop-only"> производителей высококачественной 100% х/<br class="desktop-only">б пряжи экспортирующей продукцию <br class="desktop-only"> собственного производства. Наши <br class="desktop-only"> производственные мощности позволяют<br class="desktop-only">выполнять самые сложные заказы в любых<br class="desktop-only"> объемах. Имея соответствующую<br class="desktop-only"> производственную базу, которая состоит из<br class="desktop-only"> сотрудников с большим опытом работы и<br class="desktop-only"> современного оборудования,<br class="desktop-only"> компания выпускает продукции,<br class="desktop-only"> экологичность производства и соответствие<br class="desktop-only"> международным стандартам. </p>
+        <p class="card__text">"Mili Tex Group" является одним из ведущих <br class="desktop-only"> производителей высококачественной 100% х/<br class="desktop-only">б пряжи экспортирующей продукцию <br class="desktop-only"> собственного производства. Наши <br class="desktop-only"> производственные мощности позволяют<br class="desktop-only">выполнять самые сложные заказы в любых<br class="desktop-only"> объемах. Имея соответствующую<br class="desktop-only"> производственную базу, которая состоит из<br class="desktop-only"> сотрудников с большим опытом работы и<br class="desktop-only"> современного оборудования,<br class="desktop-only"> компания выпускает продукции,<br class="desktop-only"> экологичность производства и соответствие<br class="desktop-only"> международным стандартам. </p>
     </div>
     <div class="card gallery__item_8">
         <img src="../assets/img/woman-worker.jpg" alt="" class="width_100">
@@ -119,7 +119,7 @@
         C какими странами мы сотрудничаем?
     </h2>
     <p class="section__text">
-        Мы экспортируем свою продукцию во многие страны, а именно: Россия, <br class="desktop-only"> Китай, Турция и другие. 
+        Мы экспортируем свою продукцию во многие страны, особенно: Россия, <br class="desktop-only"> Китай, Турция и другие. 
     </p>
     <div class="section5__countries">
         <div class="card">
@@ -159,7 +159,7 @@
 
         <div class="card">
             <img src="../assets/img/flag-un.svg" alt="">
-            <p class="card__text">Европейский<div class="mobile-only"></div>Союз</p>
+            <p class="card__text">Европейский Союз</p>
         </div>
 
     </div>
@@ -176,6 +176,8 @@
 <script>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CountUp from "vue-countup-v3";
 import ContactSection from '../components/ContactSection.vue'
 export default {
@@ -192,5 +194,132 @@ export default {
             }        
         }
     },
+    mounted() {
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.normalizeScroll(true)
+        const boxes = gsap.utils.toArray('.header__content');
+        const sectionCards = gsap.utils.toArray('.section1__cards')
+        const sectionTitle = gsap.utils.toArray('.section__title')
+        const gallery = gsap.utils.toArray('.gallery')
+        const devide_1 = gsap.utils.toArray('.section2__content')
+        const devide_2 = gsap.utils.toArray('.section2__image__container')
+        const callText = gsap.utils.toArray('.section3__content')
+        const desktopOnly = gsap.utils.toArray('.desktop-only')
+        const mobileOnly = gsap.utils.toArray('.mobile-only')
+        const flags = gsap.utils.toArray('.section5__countries')
+        const maps = gsap.utils.toArray('.padding_big')
+        const footer = gsap.utils.toArray('.padding_big')
+
+
+        footer.forEach((box, i) => {
+    const anim = gsap.fromTo(box, {autoAlpha: 0, transform: 'translateY(7vw)', opacity: 0}, {duration: 1, autoAlpha: 1, transform: 'translateY(0vw)', opacity: 1});
+    ScrollTrigger.create({
+        trigger: box,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+
+    boxes.forEach((box, i) => {
+        const anim = gsap.fromTo(box, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: box,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    sectionCards.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    sectionTitle.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    devide_1.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    devide_2.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    gallery.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    callText.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    desktopOnly.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    mobileOnly.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    flags.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    maps.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+}
 }
 </script>

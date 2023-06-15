@@ -4,9 +4,9 @@
       <Navbar />
       <div class="header__center padding_normal">
           <div class="header__content">
-              <h1 class="header__title">Текстильные продукции
-                  высокого качества в Militex</h1>
-              <p class="header__text desktop-only">Militex является одним из ведущих производителей высококачественной 100% х/б <br class="desktop-only"> пряжи экспортирующей продукцию собственного производства. </p>
+              <h1 class="header__title">Текстильные продукции <br>
+                  высокого качества <br> в "Mili Tex Group"</h1>
+              <p class="header__text desktop-only">"Mili Tex Group" является одним из ведущих производителей высококачественной 100% х/б <br class="desktop-only"> пряжи экспортирующей продукцию собственного производства. </p>
               <router-link to="/modal" class="button">
                 <p>Cвязаться</p>
                   <img src="../assets/img/arrow-right.svg" alt="">
@@ -21,8 +21,8 @@
     
     <div class="section section1 padding_normal">
       <Modal />
-        <p class="section__sub">Продукты</p>
-      <h2 class="section__title">У нас производиться <br> такие такие продукты</h2>
+        <p class="section__sub">Продукция</p>
+      <h2 class="section__title">У нас производиться <br> такие Продукция</h2>
       <div class="section1__cards">
           <div class="card">
               <span>01</span>
@@ -51,7 +51,7 @@
               </p>
           </div>
 
-          <div class="card">
+          <!-- <div class="card">
               <span>03</span>
               <router-link to="/product/03">
               <h3 class="card__title">
@@ -73,7 +73,7 @@
             </router-link>
               <p class="card__text">
                   Производство и продажа х/б пряжи пневмомеханического способа прядения для трикотажного и ткацкого назначения Ne (Oe) 20-30/1, Nm 34-50/1...</p>
-          </div>
+          </div> -->
 
 
 
@@ -91,7 +91,7 @@
                   Мы в цыфрах
               </p>
               <h3 class="card__title">
-                  Militex является одним из ведущих <br class="desktop-only"> производи<span class="hyphen">-</span>телей нешей страны
+                  "Mili Tex Group" является одним из ведущих <br class="desktop-only"> производи<span class="hyphen">-</span>телей Нашей страны
               </h3>
               <p class="section__text">
                   Основные виды деятельности MILI TEX GROUP прядение волокон, оптовая торговля. Отличительны черты нашей организации – это создание и стратегическое развитие лучшей Узбекской текстильной компании мирового уровня, обеспечивающей текстильный рынок России, Европы и азиатские страны.
@@ -125,7 +125,7 @@
 
                       </h3>
                       <p class="card__text">
-                          Сотруднтков работают <br class="desktop-only"> в Militex 
+                          Сотруднтков работают <br class="desktop-only"> в "Mili Tex Group" 
                       </p>
                   </div>
               </div>
@@ -196,7 +196,7 @@
           C какими странами мы сотрудничаем?
       </h2>
       <p class="section__text">
-        Мы экспортируем свою продукцию во многие страны, а именно: Россия, <br class="desktop-only"> Китай, Турция и другие. 
+        Мы экспортируем свою продукцию во многие страны, особенно: Россия, <br class="desktop-only"> Китай, Турция и другие. 
       </p>
       <div class="section5__countries">
           <div class="card">
@@ -251,6 +251,8 @@
 </template>
 
 <script>
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 import CountUp from "vue-countup-v3";
@@ -273,7 +275,125 @@ export default {
       scrollDown(){
         document.getElementById('footer').scrollIntoView({behavior: 'smooth'})
       },
-    }
+    },
+    mounted() {
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.normalizeScroll(true)
+        const boxes = gsap.utils.toArray('.header__content');
+        const sectionCards = gsap.utils.toArray('.section1__cards')
+        const sectionTitle = gsap.utils.toArray('.section__title')
+        const button = gsap.utils.toArray('.button')
+        const devide_1 = gsap.utils.toArray('.section2__content')
+        const devide_2 = gsap.utils.toArray('.section2__image__container')
+        const callText = gsap.utils.toArray('.section3__content')
+        const desktopOnly = gsap.utils.toArray('.desktop-only')
+        const mobileOnly = gsap.utils.toArray('.mobile-only')
+        const flags = gsap.utils.toArray('.section5__countries')
+        const maps = gsap.utils.toArray('.padding_big')
+        const footer = gsap.utils.toArray('.padding_big')
+
+
+        footer.forEach((box, i) => {
+    const anim = gsap.fromTo(box, {autoAlpha: 0, transform: 'translateY(7vw)', opacity: 0}, {duration: 1, autoAlpha: 1, transform: 'translateY(0vw)', opacity: 1});
+    ScrollTrigger.create({
+        trigger: box,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+
+    boxes.forEach((box, i) => {
+        const anim = gsap.fromTo(box, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: box,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    sectionCards.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    sectionTitle.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    devide_1.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    devide_2.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    callText.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    desktopOnly.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    mobileOnly.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    flags.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+    maps.forEach((info, i) => {
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    ScrollTrigger.create({
+        trigger: info,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+    });
+    });
+}
 }
 
 </script>

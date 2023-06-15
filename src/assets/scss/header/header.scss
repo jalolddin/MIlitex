@@ -32,7 +32,7 @@
         }
     }
     &__logo {
-        height: 3rem;
+        height: 4rem;
     }
     &__center {
         display: flex;
@@ -44,7 +44,7 @@
     }
     &__title {
         font-weight: 500;
-        font-size: 48px;
+        font-size: 50px;
     }
     &__text {
         font-weight: 454;
@@ -52,7 +52,8 @@
         line-height: 150%;
     }
     &__content {
-        width: 60%;
+        width: 75%;
+        // margin-top: -7rem;
     }
     .scroll-down {
         display: flex;

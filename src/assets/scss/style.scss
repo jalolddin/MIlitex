@@ -76,6 +76,33 @@ li {
     display: flex;
     align-items: center;
     gap: 1rem;
+    input {
+        appearance: none;
+        outline: none;
+        color: white;
+        background: none;
+        width: 35px;
+        margin-right: -1rem;
+        border: none;
+        font-weight: 500;
+        font-size: 20px;
+    }
+}
+.available__languages{
+    position: absolute;
+    right: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-radius: 12px;
+    top: 10%;
+    background-color: white;
+    width: 5rem;
+    z-index: 1;
+    color: black;
+    text-align: center;
 }
 
 span {
@@ -294,8 +321,8 @@ span {
         grid-area: c10;
     }
 }
-.contact-info{
-    background-image: url('../img/background.jpg');
+.contact-info {
+    background-image: url("../img/background.jpg");
     background-size: cover;
     backdrop-filter: blur(50px);
     height: 100vh;
@@ -303,7 +330,6 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .modal {
     max-width: 600px;
@@ -313,10 +339,10 @@ span {
     position: relative;
     border: none;
     border-radius: 12px;
-    background: #FFFFFF;
+    background: #ffffff;
     backdrop-filter: blur(36px);
     box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.2);
-    background-image: url('../img/arrow-right_blue_gradient.png');
+    background-image: url("../img/arrow-right_blue_gradient.png");
     background-repeat: no-repeat;
     background-position: 150% 250%;
     background-size: 50% auto;
@@ -337,9 +363,9 @@ span {
             border-radius: 10rem;
             outline: none;
             width: 50%;
-            border: 1px solid #E2E4E5;
+            border: 1px solid #e2e4e5;
             &::placeholder {
-                color: #858E98;
+                color: #858e98;
             }
         }
         &__button {
@@ -383,7 +409,13 @@ span {
 }
 
 .bg_img_disabled {
-    background-image: none
+    background-image: none;
+    .language-picker{
+        input{
+            color: var(--color-blue_dark);
+            font-weight: 550;
+        }
+    }
 }
 
 .navbar-hidden {
@@ -435,7 +467,8 @@ span {
         flex-direction: column;
         gap: 2rem;
         margin-bottom: auto;
-        & p, li {
+        & p,
+        li {
             padding: 0;
             margin: 0;
         }
@@ -453,12 +486,11 @@ span {
         line-height: 30px;
 
         & .lang-item {
-            color: #858E98;
+            color: #858e98;
         }
         & .active {
-            color: var(--color-blue_dark)
+            color: var(--color-blue_dark);
         }
-
     }
 }
 
@@ -476,7 +508,7 @@ span {
 }
 
 .blue-text {
-    color: #0F77C2;
+    color: #0f77c2;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
