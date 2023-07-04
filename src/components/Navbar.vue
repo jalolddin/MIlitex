@@ -73,17 +73,15 @@
                 </li>
             </div>
             <div class="bottom">
-                <div class="lang-item">O`ZB</div>
-                <div class="lang-item active">РУС</div>
-                <div class="lang-item">ENG</div>
+                <div :class="{'active': selectedLan === lan}" class="lang-item" @click="selectLang(lan)" v-for="lan in languages" :key="lan">{{lan}}</div>
             </div>
         </div>
-        <div @click="lanShow = !lanShow" class="language-picker desktop-only">
-            <input v-model="selectedLan" type="text">
+        <div style="cursor: pointer" @click="lanShow = !lanShow" class="language-picker desktop-only">
+            <input  v-model="selectedLan" type="text" style="cursor: pointer">
             <img :src="arrw_down_icon_url" alt="">
         </div>
         <div v-if="lanShow" class="available__languages">
-            <p class="npm" @click="selectLang(lan)" v-for="lan in languages" :key="lan">{{lan}}</p>
+            <p class="npm" style="cursor: pointer" @click="selectLang(lan)" v-for="lan in languages" :key="lan">{{lan}}</p>
         </div>
         <div class="hamburger" @click="openNavbar" >
             <img :src="hamburger_icon_url" alt="">

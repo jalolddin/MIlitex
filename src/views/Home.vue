@@ -135,7 +135,6 @@
           </div>
       </div>
   </div>
-  <ContactSection />
   <div class="section section4 padding_normal">
       <p class="section__sub">
           НАШИ ПРЕИМУЩЕСТВА
@@ -278,7 +277,7 @@ export default {
     },
     mounted() {
         gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.normalizeScroll(true)
+        // ScrollTrigger.normalizeScroll(true)
         const boxes = gsap.utils.toArray('.header__content');
         const sectionCards = gsap.utils.toArray('.section1__cards')
         const sectionTitle = gsap.utils.toArray('.section__title')

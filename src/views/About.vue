@@ -109,8 +109,6 @@
     </div>
 </div>
 
-<ContactSection />
-
 <div class="section section5 padding_normal">
     <p class="section__sub">
         сотрудничество

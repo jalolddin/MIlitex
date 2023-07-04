@@ -9,8 +9,8 @@
                 </div>
 
                 <div class="card__container">
-                    <a href="#"><img src="../assets/img/telegram.svg" alt="" class="width_100"></a>
-                    <a href="#"><img src="../assets/img/instagram.svg" alt="" class="width_100"></a>
+                    <a href="https://t.me/MILITEX_ISMOIL"><img src="../assets/img/telegram.svg" alt="" class="width_100"></a>
+                    <a href="https://instagram.com/mili_tex_group?igshid=MzRlODBiNWFlZA=="><img src="../assets/img/instagram.svg" alt="" class="width_100"></a>
                     <a style="margin-top: 2px" href="weixin://dl/chat?{Is5233935}"><img src="../assets/img/WeChat.svg" alt="" class="width_100"></a>
 
                 </div>
@@ -31,13 +31,13 @@
                 <p class="footer__text"><a href="#">Пряжа кардная Ne 30/1, 100%</a></p>
                 <p class="footer__text"><a href="#">Пряжа кардная пневмопрядельная <br> Ne 32/1, 100%</a></p>
             </div>
-            <p class="footer__text mobile-only footer-address"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7">Узбекистан, г. Ташкент, Гулистанский район</a></p>
+            <p class="footer__text mobile-only footer-address"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7">Узбекистан, г.Ташкент, Чиланзарский район, 10 квартал 4А</a></p>
 
             <div class="card footer-contact">
                 <p class="footer__title">Контакты</p>
                 <p class="footer__text"><a href="#">+998 95 198 10 10</a></p>
-                <p class="footer__text"><a href="#">(71) 90 167 58 46</a></p>
-                <p class="footer__text desktop-only"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7">Узбекистан, г. Ташкент, Гулистанский район</a></p>
+                <p class="footer__text"><a href="#">+998 (71) 167 58 46</a></p>
+                <p class="footer__text desktop-only"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7">Узбекистан, г.Ташкент, Чиланзарский район, 10 квартал 4А</a></p>
             </div>
         </div>
     </div>

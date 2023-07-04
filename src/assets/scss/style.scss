@@ -97,7 +97,7 @@ li {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     border-radius: 12px;
-    top: 10%;
+    top: 8%;
     background-color: white;
     width: 5rem;
     z-index: 1;
@@ -484,7 +484,8 @@ span {
         font-weight: 800;
         font-size: 25px;
         line-height: 30px;
-
+        position: absolute;
+        bottom: 5%;
         & .lang-item {
             color: #858e98;
         }
