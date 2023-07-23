@@ -36,17 +36,6 @@
                         <img src="../assets/img/pp2.png" alt="">
                     </div>
                 </div>
-    
-                <div class="all-products__item wrap-reverse">
-                    <div class="all-products__item-image firstImage">
-                        <img src="../assets/img/pp3.png" alt="">
-                    </div>
-                    <div class="all-products__item-content firstText">
-                        <h3 class="card__title" v-html="$t('cottonYarn32')"></h3>
-                        <p class="section__text" v-html="$t('product__3')"></p>
-                    </div>
-                </div>
-    
             </div>
         </div>
     

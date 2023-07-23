@@ -95,9 +95,10 @@ export default{
             this.arrw_down_icon_url = require('../assets/img/arrow-down_blue_dark.svg');
             this.hamburger_icon_url = require('../assets/img/hamburger.svg');
         } else {
-            this.logo_url = require('../assets/img/logo.png');
-            this.arrw_down_icon_url = require('../assets/img/arrow-down.svg');
-            this.hamburger_icon_url  = require('../assets/img/hamburger-white.svg');
+            this.logo_url =  require('../assets/img/logo-colorful.svg');
+            this.arrw_down_icon_url = require('../assets/img/arrow-down_blue_dark.svg');
+            this.hamburger_icon_url = require('../assets/img/hamburger.svg');
+
         }
     },
     methods: {

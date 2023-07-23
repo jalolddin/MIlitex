@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import './assets/scss/style.scss'
 import { createI18n } from 'vue-i18n'
+import ToastPlugin from 'vue-toast-notification';
+import 'vue-toast-notification/dist/theme-bootstrap.css';
 const i18n = createI18n({
   locale: 'ru',
   messages: {
@@ -68,8 +70,10 @@ const i18n = createI18n({
         qualityDesc: 'Высококачественная продукция соответсвующая всем нормам и предлагающая взаимовыгодное сотрудничество',
         ecological: 'Экологичность',
         ecologicalDesc: 'Экологичность производства и соответствие международным стандартам',
-        quality100: 'Качество на все 100'
-      
+        quality100: 'Качество на все 100',
+        send: "Отправить",
+        name: 'Имя',
+        number: 'Номер телефона'
       },
     en: {
       scroll: 'Scroll Down',
@@ -124,7 +128,7 @@ const i18n = createI18n({
       newTech: 'Our products are manufactured with the latest technology',
       difficultOrder: 'Complex orders in any volume',
       orderDesc: '"Mili Tex Group" is one of the leading <br class="desktop-only"> manufacturers of high-quality <br class="desktop-only"> yarn exporting its own products. Our <br class="desktop-only"> manufacturing facilities enable us to <br class="desktop-only"> manufacture products based on <br class="desktop-only"> environmental friendliness and compliance with <br class="desktop-only"> international standards. Having an appropriate<br class="desktop-only"> production base, which consists of <br class="desktop-only"> employees with extensive experience and<br class="desktop-only"> modern equipment,<br class="desktop-only"> the company produces products that<br class="desktop-only"> are environmentally friendly and conform to<br class="desktop-only"> international standards.',
-      product__1: 'We have the latest equipment (Switzerland), TRUTZSCHLER, SAUREP JINTAN, Schlafhorst Autoconer 6 and much more. The production capacities of the spinning mill today process 25 tons of raw materials per day.',
+      product__1: 'We have the latest equipment (Switzerland), TRUTZSCHLER, SAURER JINTAN, Schlafhorst Autoconer 6 and much more. The production capacities of the spinning mill today process 25 tons of raw materials per day.',
       product__2: 'Rieter (Switzerland), Savio (Italy) SAURER JITAN and much more. The production capacities of the spinning mill today process 10 tons of raw materials per day.',
       product__3: 'Meet the new Nissan Pathfinder! Check out its impressive design. Expressive, simple lines give the body a modern, resolute appearance. Want to show more personality? Choose from a two-tone body color! LED headlights and daytime running lights, combined with a massive V-Motion grille, make the Nissan Pathfinder look noticeable and memorable.',
       schlarft: 'As before, Schlafhorst offers graduated automation solutions that are individually specified for each customer in compliance with his internal processes by choosing the matching machine type, as well as the desired bobbin and tube handling.',
@@ -132,10 +136,13 @@ const i18n = createI18n({
       qualityDesc: 'High-quality products that meet all standards and offer mutually beneficial cooperation',
       ecological: 'Environmental friendliness',
       ecologicalDesc: 'Environmentally friendly production and compliance with international standards',
-      quality100: 'Quality for all 100'
+      quality100: 'Quality for all 100',
+      send: "Send",
+      name: 'Name',
+      number: 'Phone number'
     }
   }
   })
   
 
-createApp(App).use(store).use(router).use(i18n).mount('#app')
+createApp(App).use(store).use(router).use(i18n).use(ToastPlugin).mount('#app')

@@ -79,12 +79,12 @@ li {
     input {
         appearance: none;
         outline: none;
-        color: white;
+        color: var(--color-blue_dark);
+        font-weight: 550;
         background: none;
         width: 35px;
         margin-right: -1rem;
         border: none;
-        font-weight: 500;
         font-size: 20px;
     }
 }

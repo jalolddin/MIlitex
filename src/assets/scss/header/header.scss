@@ -1,5 +1,6 @@
 .header {
     color: white;
+    margin: auto;
     font-weight: 600;
     &__main {
         background-image: url(../img/arrow-left_big.png), url(../img/header-main.png), linear-gradient(var(--color-blue_light), var(--color-blue_dark));
@@ -13,6 +14,8 @@
         justify-content: space-between;
         gap: 10rem;
         padding: 1rem 0;
+        background-color: var(--color-white_blueish);
+        color: var(--color-blue_dark);
     }
     &__nav {
         margin-left: auto;
@@ -29,11 +32,6 @@
         & .link_active {
             border-bottom: 2px solid var(--color-blue_light);
         }
-    }
-    .backDark{
-        background: rgba($color: #000000, $alpha: 0.6);
-        border-radius: 0.6rem;
-        padding: 0.6rem;
     }
     &__logo {
         height: 6.1rem;

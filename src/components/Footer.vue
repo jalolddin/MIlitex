@@ -31,13 +31,14 @@
                 <p class="footer__text"><a href="#" v-html="$t('yarn30')"></a></p>
                 <p class="footer__text"><a href="#" v-html="$t('yarnNe')"></a></p>
             </div>
-            <p class="footer__text mobile-only footer-address"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7" v-html="$t('address')"></a></p>
+            <p class="footer__text mobile-only footer-address"><a href="https://www.google.com/maps/place/41%C2%B016'55.2%22N+69%C2%B011'54.6%22E/@41.2823104,69.1984986,17.39z/data=!4m4!3m3!8m2!3d41.281989!4d69.198485?entry=ttu" v-html="$t('address')"></a></p>
 
             <div class="card footer-contact">
                 <p class="footer__title" v-html="$t('contacts')"></p>
                 <p class="footer__text"><a href="#">+998 95 198 10 10</a></p>
                 <p class="footer__text"><a href="#">+998 90 167 58 46</a></p>
-                <p class="footer__text desktop-only"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7" v-html="$t('address')"></a></p>
+                <p class="footer__text"><a href="#">+998 99 073 00 00</a></p>
+                <p class="footer__text desktop-only"><a href="https://www.google.com/maps/place/41%C2%B016'55.2%22N+69%C2%B011'54.6%22E/@41.2823104,69.1984986,17.39z/data=!4m4!3m3!8m2!3d41.281989!4d69.198485?entry=ttu" v-html="$t('address')"></a></p>
             </div>
         </div>
     </div>

@@ -5,9 +5,7 @@
                 <img width="width_100" src="assets/img/cancel-outlined.svg" alt="">
             </div>
             <form class="modal__form">
-                <h3 class="modal__title">
-                    Cвяжитесь с нами и начните сотрудничество сегодня
-                </h3>
+                <h3 class="modal__title" v-html="$t('contactUs')"></h3>
                 <input id="name" type="text" name="name" placeholder="Ismingiz">
                 <input id="phone" type="tel" name="phone" placeholder="Tel.qaramingiz">
                 <button type="button" onclick="closeModal()" class="modal__form__button">Yuborish</button>
