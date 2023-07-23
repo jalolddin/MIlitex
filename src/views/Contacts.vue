@@ -5,12 +5,8 @@
         </div>
     
         <div class="banner pad_ver_3 padding_normal ">
-            <p class="section__sub">
-                Контакты
-            </p>
-            <h2 class="section__title">
-                Cвяжитесь с нами и начните <br> сотрудничество сегодня
-            </h2>
+            <p class="section__sub" v-html="$t('contacts')"></p>
+            <h2 class="section__title" v-html="$t('contactUs')"></h2>
         </div>
     
         <div class="section padding_normal contact__container">
@@ -18,28 +14,28 @@
                 <div class="contact__item">
                     <h3 class="card__title">
                         <img src="../assets/img/location-marker.svg" alt="">
-                        Ташкент
+                        {{ $t('tashkent') }}
                     </h3>
                     <a href="tel:+998990020629">+998 99 002-06-29</a>
-                    <p>Чилонзор тумани, кўтарма <br > маҳалласи, 14 А</p>
+                    <p v-html="$t('tashkentAddress')"></p>
                 </div>
     
                 <div class="contact__item">
                     <h3 class="card__title">
                         <img src="../assets/img/location-marker.svg" alt="">
-                        Гулистон
+                        {{ $t('guliston') }}
                     </h3>
                     <a href="tel:+99871901675846">+998 71 90 167-58-46 </a>
-                    <p>Сырдарьинская область, г. <br> Гулистан, ул. Айланма 1</p>
+                    <p v-html="$t('gulistonAddress')"></p>
                 </div>
     
                 <div class="contact__item">
                     <h3 class="card__title">
                         <img src="../assets/img/location-marker.svg" alt="">
-                        Гулистон
+                        {{ $t('guliston') }}
                     </h3>
                     <a href="tel:+998990730000">+998 99 073 00-00</a>
-                    <p>Сырдарьинская область, Гулистан <br> р-н, Зарбдор КФЙ Ишонч СИУ</p>
+                    <p v-html="$t('gulistonAddress2')"></p>
                 </div>
             </div>
             <div class="contacts-image">
@@ -83,7 +79,7 @@ export default {
     });
 
     sectionTitle.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -92,7 +88,7 @@ export default {
     });
     });
     contactsImage.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -101,7 +97,7 @@ export default {
     });
     });
     contacts.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -110,7 +106,7 @@ export default {
     });
     });
     callText.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -119,7 +115,7 @@ export default {
     });
     });
     desktopOnly.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -128,7 +124,7 @@ export default {
     });
     });
     mobileOnly.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,

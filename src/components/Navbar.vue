@@ -5,7 +5,7 @@
                 'about-header': isActive === '/about',
             }"
     >
-        <div class="header__logo-container">
+        <div class="header__logo-container" :class="{'backDark': $route.path === '/'}">
            <router-link to="/">
                <img :src="logo_url" alt="" class="header__logo">
             </router-link>
@@ -14,24 +14,16 @@
         <nav class="header__nav">
             <ul>
                 <li class="header__nav__item">
-                    <router-link to="/" :class="{'link_active': isActive === '/'}" >
-                        Главная
-                    </router-link>
+                    <router-link v-html="$t('main')" to="/" :class="{'link_active': isActive === '/'}"></router-link>
                 </li>
                 <li class="header__nav__item">
-                  <router-link to="/about" :class="{'link_active': isActive === '/about'}">
-                     О Mili Tex Group
-                  </router-link>
+                  <router-link to="/about" :class="{'link_active': isActive === '/about'}" v-html="$t('about')"></router-link>
                 </li>
                 <li class="header__nav__item">
-                  <router-link to="/products" :class="{'link_active': isActive === '/products'}">
-                    Продукция
-                  </router-link>
+                  <router-link to="/products" :class="{'link_active': isActive === '/products'}" v-html="$t('production')"></router-link>
                 </li>
                 <li class="header__nav__item">
-                  <router-link to="/contacts" :class="{'link_active': isActive === '/contacts'}">
-                    Контакты
-                  </router-link>
+                  <router-link to="/contacts" :class="{'link_active': isActive === '/contacts'}" v-html="$t('contacts')"></router-link>
                 </li>
             </ul>
         </nav>
@@ -52,32 +44,24 @@
                     Страницы
                 </p>
                 <li class="header__nav__item">
-                    <router-link to="/" :class="{'link_active': isActive === '/'}" >
-                        Главная
-                    </router-link>
+                    <router-link v-html="$t('main')" to="/" :class="{'link_active': isActive === '/'}"></router-link>
                 </li>
                 <li class="header__nav__item">
-                  <router-link to="/about" :class="{'link_active': isActive === '/about'}">
-                     О Mili Tex Group
-                  </router-link>
+                    <router-link to="/about" :class="{'link_active': isActive === '/about'}" v-html="$t('about')"></router-link>
                 </li>
                 <li class="header__nav__item">
-                  <router-link to="/products" :class="{'link_active': isActive === '/products'}">
-                    Продукция
-                  </router-link>
+                    <router-link to="/products" :class="{'link_active': isActive === '/products'}" v-html="$t('production')"></router-link>
                 </li>
                 <li class="header__nav__item">
-                  <router-link to="/contacts" :class="{'link_active': isActive === '/contacts'}">
-                    Контакты
-                  </router-link>
+                    <router-link to="/contacts" :class="{'link_active': isActive === '/contacts'}" v-html="$t('contacts')"></router-link>
                 </li>
             </div>
             <div class="bottom">
-                <div :class="{'active': selectedLan === lan}" class="lang-item" @click="selectLang(lan)" v-for="lan in languages" :key="lan">{{lan}}</div>
+                <div :class="{'active': selectedLan === lan}" class="lang-item" @click="selectLang(lan)"  v-for="lan in languages" :key="lan">{{lan}}</div>
             </div>
         </div>
         <div style="cursor: pointer" @click="lanShow = !lanShow" class="language-picker desktop-only">
-            <input  v-model="selectedLan" type="text" style="cursor: pointer">
+            <input  v-model="selectedLan" type="text" style="cursor: pointer; text-transform: uppercase">
             <img :src="arrw_down_icon_url" alt="">
         </div>
         <div v-if="lanShow" class="available__languages">
@@ -95,7 +79,7 @@ export default{
         return {
             selectedLan: 'RU',
             lanShow: false,
-            languages: ['UZ', 'EN', 'RU'],
+            languages: ['en', 'ru'],
             isActive: '/',
             logo_url: '',
             arrw_down_icon_url: '',
@@ -104,6 +88,8 @@ export default{
     },
     created(){
         this.isActive = this.$route.fullPath
+        this.selectedLan = localStorage.getItem('lang') 
+        this.$i18n.locale = localStorage.getItem('lang')
         if (this.isActive != '/') {
             this.logo_url =  require('../assets/img/logo-colorful.svg');
             this.arrw_down_icon_url = require('../assets/img/arrow-down_blue_dark.svg');
@@ -113,11 +99,12 @@ export default{
             this.arrw_down_icon_url = require('../assets/img/arrow-down.svg');
             this.hamburger_icon_url  = require('../assets/img/hamburger-white.svg');
         }
-    //    console.log(h = this.isActive) 
     },
     methods: {
         selectLang(item){
-            this.selectedLan = item
+            localStorage.setItem('lang', item)
+            this.selectedLan = localStorage.getItem('lang') 
+            this.$i18n.locale = item
             this.lanShow = false
         },
         openNavbar() {

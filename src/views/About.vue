@@ -5,27 +5,17 @@
 </div>
 
 <div class="banner pad_ver_3 padding_normal">
-    <p class="section__sub">
-        О Нас
-    </p>
-    <h2 class="section__title">
-        Вы можете узнать про <br> нашу историю
-    </h2>
+    <p class="section__sub" v-html="$t('about')"></p>
+    <h2 class="section__title" v-html="$t('knowHistory')"></h2>
 </div>
 
 
 <div class="section section2 padding_normal">
     <div class="divided">
         <div class="section2__content">
-            <p class="section__sub pad_ver_3">
-                Мы в цыфрах
-            </p>
-            <h3 class="card__title">
-                "Mili Tex Group" является одним из ведущих <br class="desktop-only"> производителей Нашей страны
-            </h3>
-            <p class="section__text">
-                Основные виды деятельности MILI TEX GROUP прядение волокон, оптовая торговля. Отличительны черты нашей организации – это создание и стратегическое развитие лучшей Узбекской текстильной компании мирового уровня, обеспечивающей текстильный рынок России, Европы и азиатские страны.
-            </p>
+            <p class="section__sub pad_ver_3" v-html="$t('inNumbers')"></p>
+            <h3 class="card__title" v-html="$t('numberOne')"></h3>
+            <p class="section__text" v-html="$t('mainDepartments')"></p>
             <div class="line__horizontal"></div>
             <div class="card__container">
                   <div class="card">
@@ -33,9 +23,7 @@
                         <count-up :endVal="14" :options="counterOptions"></count-up>
 
                       </h3>
-                      <p class="card__text">
-                          Лет опыта <br class="desktop-only"> на рынке 
-                      </p>
+                      <p class="card__text" v-html="$t('inMarket')"></p>
                   </div>
 
                   <div class="card">
@@ -44,9 +32,7 @@
                         <count-up :end-val="30" :options="counterOptions"></count-up>
 
                       </h3>
-                      <p class="card__text">
-                          Тонн в сутки <br class="desktop-only"> прядельного шелка
-                      </p>
+                      <p class="card__text" v-html="$t('tonns')"></p>
                   </div>
 
                   <div class="card">
@@ -54,9 +40,7 @@
                         <count-up :end-val="750" :options="counterOptions"></count-up>
 
                       </h3>
-                      <p class="card__text">
-                          Сотруднтков работают <br class="desktop-only"> в "Mili Tex Group" 
-                      </p>
+                      <p class="card__text" v-html="$t('employees')"></p>
                   </div>
               </div>
         </div>
@@ -68,8 +52,8 @@
 
 
 <div class="section padding_normal">
-    <p class="section__sub">кому мы можем помочь</p>
-    <h2 class="section__title">У нас производиться <br> такие Продукция</h2>
+    <p class="section__sub" v-html="$t('canHelp')"></p>
+    <h2 class="section__title" v-html="$t('weProduct')"></h2>
 </div>
 
 <!-- stupid cards container -->
@@ -93,10 +77,8 @@
         <img src="../assets/img/product6.jpg" alt="" class="width_100">
     </div>
     <div class="card gallery__item_7">
-        <h3 class="card__title">
-            Сложные заказы любых объемах
-        </h3>
-        <p class="card__text">"Mili Tex Group" является одним из ведущих <br class="desktop-only"> производителей высококачественной 100% х/<br class="desktop-only">б пряжи экспортирующей продукцию <br class="desktop-only"> собственного производства. Наши <br class="desktop-only"> производственные мощности позволяют<br class="desktop-only">выполнять самые сложные заказы в любых<br class="desktop-only"> объемах. Имея соответствующую<br class="desktop-only"> производственную базу, которая состоит из<br class="desktop-only"> сотрудников с большим опытом работы и<br class="desktop-only"> современного оборудования,<br class="desktop-only"> компания выпускает продукции,<br class="desktop-only"> экологичность производства и соответствие<br class="desktop-only"> международным стандартам. </p>
+        <h3 class="card__title" v-html="$t('difficultOrder')"></h3>
+        <p class="card__text" v-html="$t('orderDesc')"></p>
     </div>
     <div class="card gallery__item_8">
         <img src="../assets/img/woman-worker.jpg" alt="" class="width_100">
@@ -110,59 +92,54 @@
 </div>
 
 <div class="section section5 padding_normal">
-    <p class="section__sub">
-        сотрудничество
-    </p>
-    <h2 class="section__title">
-        C какими странами мы сотрудничаем?
-    </h2>
-    <p class="section__text">
-        Мы экспортируем свою продукцию во многие страны, особенно: Россия, <br class="desktop-only"> Китай, Турция и другие. 
-    </p>
+    <p class="section__sub" v-html="$t('cooperation')"></p>
+    <h2 class="section__title" v-html="$t('countries')"></h2>
+    <p class="section__text" v-html="$t('export')"></p>
     <div class="section5__countries">
         <div class="card">
             <img src="../assets/img/flag-china.svg" alt="">
-            <p class="card__text">Китай</p>
+            <p class="card__text" v-html="$t('china')"></p>
         </div>
 
         <div class="card">
             <img src="../assets/img/flag-russia.svg" alt="">
-            <p class="card__text">Россия</p>
+            <p class="card__text" v-html="$t('russia')"></p>
         </div>
 
         <div class="card">
             <img src="../assets/img/flag-turkey.png" alt="">
-            <p class="card__text">Турция</p>
+            <p class="card__text" v-html="$t('turkey')"></p>
         </div>
 
         <div class="card">
             <img src="../assets/img/flag-egypt.svg" alt="">
-            <p class="card__text">Египет</p>
+            <p class="card__text" v-html="$t('egypt')"></p>
         </div>
 
         <div class="card">
             <img src="../assets/img/flag-poland.svg" alt="">
-            <p class="card__text">Польша</p>
+            <p class="card__text" v-html="$t('polish')"></p>
         </div>
 
         <div class="card">
             <img src="../assets/img/flag-kazaxstan.svg" alt="">
-            <p class="card__text">Казахстан</p>
+            <p class="card__text" v-html="$t('kazax')"></p>
         </div>
 
         <div class="card">
             <img src="../assets/img/flag-uk.svg" alt="">
-            <p class="card__text">Великобрита<br class="mobile-only">ния</p>
+            <p class="card__text" v-html="$t('uk')"></p>
         </div>
-
+        <br class="desktop-only">
         <div class="card">
             <img src="../assets/img/flag-un.svg" alt="">
-            <p class="card__text">Европейский Союз</p>
+            <p class="card__text" v-html="$t('union')"></p>
         </div>
 
     </div>
     <div class="padding_big">
     <img src="../assets/img/world-3d.png" alt="" class="width_100">
+
     </div>
 </div>
 <ContactSection />
@@ -220,7 +197,7 @@ export default {
     });
 
     boxes.forEach((box, i) => {
-        const anim = gsap.fromTo(box, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+        const anim = gsap.fromTo(box, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: box,
         animation: anim,
@@ -229,7 +206,7 @@ export default {
     });
     });
     sectionCards.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -238,7 +215,7 @@ export default {
     });
     });
     sectionTitle.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-2%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -247,7 +224,7 @@ export default {
     });
     });
     devide_1.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -256,7 +233,7 @@ export default {
     });
     });
     devide_2.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -265,7 +242,7 @@ export default {
     });
     });
     gallery.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(1%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -274,7 +251,7 @@ export default {
     });
     });
     callText.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -283,7 +260,7 @@ export default {
     });
     });
     desktopOnly.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -292,7 +269,7 @@ export default {
     });
     });
     mobileOnly.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -301,7 +278,7 @@ export default {
     });
     });
     flags.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -310,7 +287,7 @@ export default {
     });
     });
     maps.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,

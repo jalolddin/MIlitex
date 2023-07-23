@@ -16,28 +16,28 @@
                 </div>
             </div>
             <div class="card footer-pages">
-                <p class="footer__title">Страницы</p>
+                <p class="footer__title" v-html="$t('pages')"></p>
                 <div class="footer-pages-inner">
-                    <p class="footer__text"><a href="#"> Главная</a></p>
-                    <p class="footer__text"><a href="#"> О нас </a></p>
-                    <p class="footer__text"><a href="#"> Продукция</a></p>
-                    <p class="footer__text"><a href="#">Контакты</a></p>
+                    <p class="footer__text"><router-link to="/" v-html="$t('main')"></router-link></p>
+                    <p class="footer__text"><router-link to="/about" v-html="$t('about')"></router-link></p>
+                    <p class="footer__text"><router-link to="/production" v-html="$t('production')"></router-link></p>
+                    <p class="footer__text"><router-link to="/contacts" v-html="$t('contacts')"></router-link></p>
                 </div>
 
             </div>
             <div class="card footer-products">
-                <p class="footer__title">Продукция</p>
-                <p class="footer__text"><a href="#">Пряжа кардная Ne 32/1, 100%</a></p>
-                <p class="footer__text"><a href="#">Пряжа кардная Ne 30/1, 100%</a></p>
-                <p class="footer__text"><a href="#">Пряжа кардная пневмопрядельная <br> Ne 32/1, 100%</a></p>
+                <p class="footer__title" v-html="$t('production')"></p>
+                <p class="footer__text"><a href="#" v-html="$t('yarn32')"></a></p>
+                <p class="footer__text"><a href="#" v-html="$t('yarn30')"></a></p>
+                <p class="footer__text"><a href="#" v-html="$t('yarnNe')"></a></p>
             </div>
-            <p class="footer__text mobile-only footer-address"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7">Узбекистан, г.Ташкент, Чиланзарский район, 10 квартал 4А</a></p>
+            <p class="footer__text mobile-only footer-address"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7" v-html="$t('address')"></a></p>
 
             <div class="card footer-contact">
-                <p class="footer__title">Контакты</p>
+                <p class="footer__title" v-html="$t('contacts')"></p>
                 <p class="footer__text"><a href="#">+998 95 198 10 10</a></p>
-                <p class="footer__text"><a href="#">+998 (71) 167 58 46</a></p>
-                <p class="footer__text desktop-only"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7">Узбекистан, г.Ташкент, Чиланзарский район, 10 квартал 4А</a></p>
+                <p class="footer__text"><a href="#">+998 90 167 58 46</a></p>
+                <p class="footer__text desktop-only"><a href="https://goo.gl/maps/8BuAP76eyi4EGfVQ7" v-html="$t('address')"></a></p>
             </div>
         </div>
     </div>

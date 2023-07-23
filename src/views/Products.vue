@@ -5,21 +5,13 @@
         </div>
     
         <div class="banner pad_ver_3 padding_normal">
-            <p class="section__sub">
-                Продукция
-            </p>
-            <h2 class="section__title">
-                У нас производиться <br> такие продукции
-            </h2>
+            <p class="section__sub" v-html="$t('production')"></p>
+            <h2 class="section__title" v-html="$t('weProduct')"></h2>
         </div>
     
         <div class="section padding_normal">
-            <p class="section__sub">
-                Продукция
-            </p>
-            <h2 class="section__title">
-                У нас производиться <br> такие Продукция
-            </h2>
+            <p class="section__sub" v-html="$t('production')"></p>
+            <h2 class="section__title" v-html="$t('weProduct')"></h2>
             <div class="all-products">
                 <div class="all-products__item wrap-reverse">
                     <div class="all-products__item-image firstImage">
@@ -29,28 +21,15 @@
                         <h3 class="card__title">
                             Ne 32/1, 100%
                         </h3>
-                        <p class="section__text">
-                            У нас имеется новейшие оборудование (Швейцария), 
-                            TRUTZSCHLER, SAUREP JINTAN,
-                            Schlafhorst Autoconer 6 и многое другое.
-                            Производственные мощности прядильного производства
-                            сегодня перерабатывают 25 тонн сырья в сутки.
-                        </p>
+                        <p class="section__text" v-html="$t('product__1')"></p>
                     </div>
                 </div>
     
     
                 <div class="all-products__item">
                     <div class="all-products__item-content secondText">
-                        <h3 class="card__title">
-                            Хлопчатобумажная пряжа кардная
-                            Ne 30/1, 100%
-                        </h3>
-                        <p class="section__text">
-                            Rieter (Щвейцария), Savio (Италия) SAURER JITAN и много другое.
-                            Производственные мощности прядильного производства сегодня
-                            перерабатывают 10 тонн сырья в сутки.
-                        </p>
+                        <h3 class="card__title" v-html="$t('cottonYarn30')"></h3>
+                        <p class="section__text" v-html="$t('product__2')"></p>
                     </div>
     
                     <div class="all-products__item-image secondImage">
@@ -63,15 +42,8 @@
                         <img src="../assets/img/pp3.png" alt="">
                     </div>
                     <div class="all-products__item-content firstText">
-                        <h3 class="card__title">
-                            Хлопчатобумажная пряжа кардная
-                            пневмопрядельная
-                            Ne 32/1, 100%
-                        </h3>
-                        <p class="section__text">
-                            Встречайте новый Nissan Pathfinder! Оцените по достоинству его впечатляющий дизайн. Выразительные простые линии придают кузову современный, решительный внешний вид. Хотите проявить больше индивидуальности?
-                            Выбирайте двухцветную окраску кузова!Светодиодные фары и ходовые огни в сочетании с массивной решеткой радиатора V–Motion делают внешность Nissan Pathfinder заметной и запоминающейся.
-                        </p>
+                        <h3 class="card__title" v-html="$t('cottonYarn32')"></h3>
+                        <p class="section__text" v-html="$t('product__3')"></p>
                     </div>
                 </div>
     
@@ -79,12 +51,8 @@
         </div>
     
         <div class="section padding_normal products__slider">
-            <p class="section__sub">
-                Оборудование
-            </p>
-            <h2 class="section__title">
-                Наши продукции производится новейшими технологиями
-            </h2>
+            <p class="section__sub" v-html="$t('equipments')"></p>
+            <h2 class="section__title" v-html="$t('newTech')"></h2>
             <div class="width_100">
                     <swiper
                         :slides-per-view="1"
@@ -105,13 +73,7 @@
                                             <h3 class="card__title">
                                                 Schlafhorst Autoconer 6
                                             </h3>
-                                            <p class="section__text">
-                                                Встречайте новый Nissan Pathfinder! Оцените по достоинству его впечатляющий дизайн. Выразительные простые линии придают кузову современный, решительный внешний вид. Хотите проявить больше индивидуальности?
-                                                
-                                            </p>
-                                            <p class="section__text">
-                                                Выбирайте двухцветную окраску кузова!Светодиодные фары и ходовые огни в сочетании с массивной решеткой радиатора V–Motion делают внешность Nissan Pathfinder заметной и запоминающейся.
-                                            </p>
+                                            <p class="section__text" v-html="$t('schlarft')"></p>
                                         </div>
                         
                                         <div class="mta button__container">
@@ -198,19 +160,7 @@
                 
             </div>
         </div>
-    
-        <div class="section section3 padding_normal">
-            <div class="padding_normal bg_green_dark pad_ver_5">
-                <div class="section3__content">
-                    <h2>Cвяжитесь с нами и начните сотрудничество сегодня</h2>
-                    <p>Постепенно создавайте синергетические общие связи с помощью кросс-<br class="desktop-only"> медийного интеллектуального капитала. с энтузиазмом</p>
-                    <router-link to="/modal" class="button">
-                        <p>Cвязаться</p>
-                        <img src="../assets/img/arrow-right.svg" alt="">
-                    </router-link>
-                </div>
-            </div>  
-        </div>
+    <Contacts />
     <Footer />
     </div>
 </template>
@@ -223,9 +173,10 @@ import {Swiper, SwiperSlide} from 'swiper/vue';
 import { ref } from 'vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
-
+import Contacts from '../components/ContactSection.vue';
 export default {
     components: {
+        Contacts,
         Navbar,
         Footer,
         Swiper,
@@ -266,7 +217,7 @@ export default {
         const secondText = gsap.utils.toArray('.secondText')
 
         firstImage.forEach((info, i) => {
-        const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+        const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
         ScrollTrigger.create({
             trigger: info,
             animation: anim,
@@ -275,7 +226,7 @@ export default {
         });
         });
         firstText.forEach((info, i) => {
-        const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+        const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
         ScrollTrigger.create({
             trigger: info,
             animation: anim,
@@ -284,7 +235,7 @@ export default {
         });
         });
         secondImage.forEach((info, i) => {
-        const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+        const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
         ScrollTrigger.create({
             trigger: info,
             animation: anim,
@@ -293,7 +244,7 @@ export default {
         });
         });
         secondText.forEach((info, i) => {
-        const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+        const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
         ScrollTrigger.create({
             trigger: info,
             animation: anim,
@@ -312,7 +263,7 @@ export default {
     });
 
     sectionTitle.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -321,7 +272,7 @@ export default {
     });
     });
     callText.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -330,7 +281,7 @@ export default {
     });
     });
     desktopOnly.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -339,7 +290,7 @@ export default {
     });
     });
     mobileOnly.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,

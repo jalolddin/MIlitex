@@ -4,82 +4,44 @@
       <Navbar />
       <div class="header__center padding_normal">
           <div class="header__content">
-              <h1 class="header__title">Текстильные продукции <br>
-                  высокого качества <br> в "Mili Tex Group"</h1>
-              <p class="header__text desktop-only">"Mili Tex Group" является одним из ведущих производителей высококачественной 100% х/б <br class="desktop-only"> пряжи экспортирующей продукцию собственного производства. </p>
+              <h1 class="header__title" v-html="$t('headerTitle')"></h1>
+              <p class="header__text desktop-only" v-html="$t('headerDescription')"></p>
               <router-link to="/modal" class="button">
-                <p>Cвязаться</p>
+                <p v-html="$t('connect')"></p>
                   <img src="../assets/img/arrow-right.svg" alt="">
               </router-link>
           </div>
           <div @click="scrollDown" class="scroll-down">
               <img src="../assets/img/arrow-down_double.svg" alt="" class="icon">
-              <p>Scroll Down</p>
+              <p v-html="$t('scroll')"></p>
           </div>
       </div>
     </div>
     
     <div class="section section1 padding_normal">
       <Modal />
-        <p class="section__sub">Продукция</p>
-      <h2 class="section__title">У нас производиться <br> такие Продукция</h2>
+        <p class="section__sub" v-html="$t('production')"></p>
+      <h2 class="section__title" v-html="$t('weProduct')"></h2>
       <div class="section1__cards">
           <div class="card">
               <span>01</span>
             <router-link to="/product/01">
-              <h3 class="card__title">
-                  Хлопчатобумажная пряжа кардная <br class="desktop-only">
-                  Ne 32/1, 100%
-              </h3>
+              <h3 class="card__title" v-html="$t('cotton')"></h3>
             </router-link>
 
-              <p class="card__text">
-                  Компания "Mili Tex Group"( Узбекистан) выражает Вам свое почтение и предлагает 100% хлопковую пряжу для трикотажа и тканей пневмопрядильного...
-              </p>
+              <p class="card__text" v-html="$t('aboutCompany')"></p>
           </div>
 
           <div class="card">
               <span>02</span>
               <router-link to="/product/02">
-              <h3 class="card__title">
-                  Пряжа 100% х/б, сурова, кардная, ткацкая,
-  пневмопрядельная хлопчатобумажная OE NE 20/1
-              </h3>
+              <h3 class="card__title" v-html="$t('yarn')"></h3>
             </router-link>
-              <p class="card__text">
-                  Производство и продажа х/б пряжи пневмомеханического способа прядения для трикотажного и ткацкого назначения Ne (Oe) 20-30/1, Nm 34-50/1...
-              </p>
+              <p class="card__text" v-html="$t('yarnDesc')"></p>
           </div>
-
-          <!-- <div class="card">
-              <span>03</span>
-              <router-link to="/product/03">
-              <h3 class="card__title">
-                  Хлопчатобумажная пряжа кардная <br class="desktop-only"> Ne 30/1, 100%
-              </h3>
-            </router-link>
-              <p class="card__text">
-                  Компания "Mili Tex Group"( Узбекистан) выражает Вам свое почтение и предлагает 100% хлопковую пряжу для трикотажа и тканей пневмопрядильного...
-              </p>
-          </div>
-
-          <div class="card">
-              <span>04</span>
-              <router-link to="/product/04">
-              <h3 class="card__title">
-                  Пряжа 100% х/б, сурова, кардная,<br class="desktop-only"> ткацкая,пневмопрядельная хлопчатобумажная OE NE 12/1 
-
-              </h3>
-            </router-link>
-              <p class="card__text">
-                  Производство и продажа х/б пряжи пневмомеханического способа прядения для трикотажного и ткацкого назначения Ne (Oe) 20-30/1, Nm 34-50/1...</p>
-          </div> -->
-
-
-
       </div>
       <router-link to="/modal" class="button">
-          <p>Cвязаться</p>
+          <p v-html="$t('connect')"></p>
           <img class="width_100" src="../assets/img/arrow-right_blue.png" alt="">
       </router-link>
   </div>
@@ -87,15 +49,9 @@
   <div class="section section2 padding_normal">
       <div class="divided">
           <div class="section2__content">
-              <p class="section__sub pad_ver_3">
-                  Мы в цыфрах
-              </p>
-              <h3 class="card__title">
-                  "Mili Tex Group" является одним из ведущих <br class="desktop-only"> производи<span class="hyphen">-</span>телей Нашей страны
-              </h3>
-              <p class="section__text">
-                  Основные виды деятельности MILI TEX GROUP прядение волокон, оптовая торговля. Отличительны черты нашей организации – это создание и стратегическое развитие лучшей Узбекской текстильной компании мирового уровня, обеспечивающей текстильный рынок России, Европы и азиатские страны.
-              </p>
+              <p class="section__sub pad_ver_3" v-html="$t('inNumbers')"></p>
+              <h3 class="card__title" v-html="$t('numberOne')"></h3>
+              <p class="section__text" v-html="$t('mainDepartments')"></p>
               <div class="line__horizontal"></div>
               <div class="card__container">
                   <div class="card">
@@ -103,9 +59,7 @@
                         <count-up :endVal="14" :options="counterOptions"></count-up>
 
                       </h3>
-                      <p class="card__text">
-                          Лет опыта <br class="desktop-only"> на рынке 
-                      </p>
+                      <p class="card__text" v-html="$t('inMarket')"></p>
                   </div>
 
                   <div class="card">
@@ -114,9 +68,7 @@
                         <count-up :end-val="30" :options="counterOptions"></count-up>
 
                       </h3>
-                      <p class="card__text">
-                          Тонн в сутки <br class="desktop-only"> прядельного шелка
-                      </p>
+                      <p class="card__text" v-html="$t('tonns')"></p>
                   </div>
 
                   <div class="card">
@@ -124,9 +76,7 @@
                         <count-up :end-val="750" :options="counterOptions"></count-up>
 
                       </h3>
-                      <p class="card__text">
-                          Сотруднтков работают <br class="desktop-only"> в "Mili Tex Group" 
-                      </p>
+                      <p class="card__text" v-html="$t('employees')"></p>
                   </div>
               </div>
           </div>
@@ -136,35 +86,23 @@
       </div>
   </div>
   <div class="section section4 padding_normal">
-      <p class="section__sub">
-          НАШИ ПРЕИМУЩЕСТВА
-      </p>
-      <h2 class="section__title">
-          Какие преимущества у нас есть перед другими
-      </h2>
+      <p class="section__sub" v-html="$t('advantages')"></p>
+      <h2 class="section__title" v-html="$t('whatAdvantages')"></h2>
       <div class="mobile-only">
         <div class="card">
         <div class="blue-text">
             01
         </div>
-        <h3 class="card__title">
-            Качество
-        </h3>
-        <div class="card__text">
-            Высококачественной продукции соответ-ствующей всем нормам и предлагающей взаимовыгодное сотрудничество
-        </div>
+        <h3 class="card__title" v-html="$t('quality')"></h3>
+        <div class="card__text" v-html="$t('qualityDesc')"></div>
       </div>
 
       <div class="card">
         <div class="blue-text">
             02
         </div>
-        <h3 class="card__title">
-            Экологичность
-        </h3>
-        <div class="card__text">
-            Экологичность производства и соответствие международным стандартам
-        </div>
+        <h3 class="card__title" v-html="$t('ecological')"></h3>
+        <div class="card__text" v-html="$t('ecologicalDesc')"></div>
       </div>
 
 
@@ -172,9 +110,7 @@
         <div class="blue-text">
             03
         </div>
-        <h3 class="card__title">
-            Качество на все 100
-        </h3>
+        <h3 class="card__title" v-html="$t('quality100')"></h3>
         
       </div>
 
@@ -188,54 +124,48 @@
   </div>
 
   <div class="section section5 padding_normal">
-      <p class="section__sub">
-          сотрудничество
-      </p>
-      <h2 class="section__title">
-          C какими странами мы сотрудничаем?
-      </h2>
-      <p class="section__text">
-        Мы экспортируем свою продукцию во многие страны, особенно: Россия, <br class="desktop-only"> Китай, Турция и другие. 
-      </p>
+      <p class="section__sub" v-html="$t('cooperation')"></p>
+      <h2 class="section__title" v-html="$t('countries')"></h2>
+      <p class="section__text" v-html="$t('export')"></p>
       <div class="section5__countries">
           <div class="card">
               <img src="../assets/img/flag-china.svg" alt="">
-              <p class="card__text">Китай</p>
+              <p class="card__text" v-html="$t('china')"></p>
           </div>
 
           <div class="card">
               <img src="../assets/img/flag-russia.svg" alt="">
-              <p class="card__text">Россия</p>
+              <p class="card__text" v-html="$t('russia')"></p>
           </div>
 
           <div class="card">
               <img src="../assets/img/flag-turkey.png" alt="">
-              <p class="card__text">Турция</p>
+              <p class="card__text" v-html="$t('turkey')"></p>
           </div>
 
           <div class="card">
               <img src="../assets/img/flag-egypt.svg" alt="">
-              <p class="card__text">Египет</p>
+              <p class="card__text" v-html="$t('egypt')"></p>
           </div>
 
           <div class="card">
               <img src="../assets/img/flag-poland.svg" alt="">
-              <p class="card__text">Польша</p>
+              <p class="card__text" v-html="$t('polish')"></p>
           </div>
 
           <div class="card">
               <img src="../assets/img/flag-kazaxstan.svg" alt="">
-              <p class="card__text">Казахстан</p>
+              <p class="card__text" v-html="$t('kazax')"></p>
           </div>
 
           <div class="card">
               <img src="../assets/img/flag-uk.svg" alt="">
-              <p class="card__text">Великобритания</p>
+              <p class="card__text" v-html="$t('uk')"></p>
           </div>
           <br class="desktop-only">
           <div class="card">
               <img src="../assets/img/flag-un.svg" alt="">
-              <p class="card__text">Европейский Союз</p>
+              <p class="card__text" v-html="$t('union')"></p>
           </div>
 
       </div>
@@ -303,7 +233,7 @@ export default {
     });
 
     boxes.forEach((box, i) => {
-        const anim = gsap.fromTo(box, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+        const anim = gsap.fromTo(box, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: box,
         animation: anim,
@@ -312,7 +242,7 @@ export default {
     });
     });
     sectionCards.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -321,7 +251,7 @@ export default {
     });
     });
     sectionTitle.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -330,7 +260,7 @@ export default {
     });
     });
     devide_1.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -339,7 +269,7 @@ export default {
     });
     });
     devide_2.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -348,7 +278,7 @@ export default {
     });
     });
     callText.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -357,7 +287,7 @@ export default {
     });
     });
     desktopOnly.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -366,7 +296,7 @@ export default {
     });
     });
     mobileOnly.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -375,7 +305,7 @@ export default {
     });
     });
     flags.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(-5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
@@ -384,7 +314,7 @@ export default {
     });
     });
     maps.forEach((info, i) => {
-    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(20%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
+    const anim = gsap.fromTo(info, {autoAlpha: 0, transform: 'translateX(5%)'}, {duration: 2, autoAlpha: 1, transform: 'translateX(0)' ,});
     ScrollTrigger.create({
         trigger: info,
         animation: anim,
