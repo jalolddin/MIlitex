@@ -118,8 +118,26 @@
           <img class="width_100" src="../assets/img/rolls-small.png" alt="">
       </div>
       </div>
-      <div class="padding_normal desktop-only">
-          <img class="width_100" src="../assets/img/cotton-rolls-info.png" alt="">
+      <div class="advantages desktop-only">
+        <img class="advantages-back" src="../assets/img/advantages.png" alt="">
+        <div class="line__1">
+            <img src="../assets/img/line_1.svg" alt="">
+            <div>
+                <h2>Качество</h2>
+                <p>Высококачественной продукции <br> соответствующей всем нормам и <br> предлагающей взаимовыгодное <br> сотрудничество</p>
+            </div>
+        </div>
+        <div class="line__2">
+            <img src="../assets/img/line_2.svg" alt="">
+            <h2>Экологичность</h2>
+            <p>Экологичность производства и <br> соответствие международным <br> стандартам</p>
+        </div>
+        <div class="line__3">
+            <img src="../assets/img/line_3.svg" alt="">
+            <div>
+                <h2>Качество на все 100</h2>
+            </div>
+        </div>
       </div>
   </div>
 

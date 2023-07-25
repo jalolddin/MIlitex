@@ -16,6 +16,8 @@
         padding: 1rem 0;
         background-color: var(--color-white_blueish);
         color: var(--color-blue_dark);
+        width: 100%;
+        z-index: 1;
     }
     &__nav {
         margin-left: auto;
