@@ -123,19 +123,19 @@
         <div class="line__1">
             <img src="../assets/img/line_1.svg" alt="">
             <div>
-                <h2>Качество</h2>
-                <p>Высококачественной продукции <br> соответствующей всем нормам и <br> предлагающей взаимовыгодное <br> сотрудничество</p>
+                <h2 v-html="$t('quality')"></h2>
+                <p v-html="$t('qualityDesc')"></p>
             </div>
         </div>
         <div class="line__2">
             <img src="../assets/img/line_2.svg" alt="">
-            <h2>Экологичность</h2>
-            <p>Экологичность производства и <br> соответствие международным <br> стандартам</p>
+            <h2 v-html="$t('ecological')"></h2>
+            <p v-html="$t('ecologicalDesc')"></p>
         </div>
         <div class="line__3">
             <img src="../assets/img/line_3.svg" alt="">
             <div>
-                <h2>Качество на все 100</h2>
+                <h2 v-html="$t('quality100')"></h2>
             </div>
         </div>
       </div>
